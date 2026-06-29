@@ -1,0 +1,53 @@
+:root {
+    --primary-color: #750A0A;
+    --secondary-color: #F8FAFC;
+    --accent-color: #64748B;
+    --cta-color: #0F172A;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+}
+
+.hamburger-menu {
+    display: none;
+    cursor: pointer;
+}
+
+nav span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+}
+
+.main-content {
+    padding: 1rem;
+}
+
+.hero {
+    text-align: center;
+    padding: 5rem 0;
+    background-image: url('hero-background.jpg');
+    background-size: cover;
+    color: white;
+}
