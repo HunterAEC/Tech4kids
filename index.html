@@ -4,39 +4,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tech for Kids</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <title>Home | Tech4Kids</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 </head>
 
 <body>
+
     <header>
-        <nav class="navbar">
-            <div class="logo">Tech for Kids</div>
-            <button class="hamburger-menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+        <div class="logo">
+            <a href="index.html">Tech4Kids</a>
+        </div>
+        <button class="hamburger-menu" aria-label="Toggle Menu" aria-expanded="false">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+        <nav class="nav-links">
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="learning.html">Learning Resources</a></li>
+                <li><a href="donations.html">Donations</a></li>
+                <li><a href="volunteer.html">Get Involved</a></li>
+                <li><a href="faqs.html">FAQs</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
         </nav>
     </header>
+
+    <section class="hero-banner">
+        <h1>Empowering Kids Through Tech Education</h1>
+        <p>Creating learning experiences that go beyond just programming.</p>
+    </section>
+
     <main>
-        <section class="hero">
-            <h1>Welcome to Tech for Kids!</h1>
-            <p>Explore fun tech learning experiences with us.</p>
+        <section class="about-section">
+            <h2>Our Mission</h2>
+            <img src="images/home-kids-tech.jpg" alt="Children working with computer hardware" class="page-image">
+            <p>Tech4Kids was created with a dream of helping kids learn tech from a young age. We believe it all starts
+                with education. Our hands-on experiences take students beyond the screen, diving deep into hardware,
+                circuits, and online safety.</p>
         </section>
-        <!-- Additional sections will go here -->
+
+        <hr>
+
+        <section class="grid-container">
+            <h2>What We Teach & Do</h2>
+            <div class="services-grid">
+                <article class="grid-item">
+                    <h3>Hands-on Building</h3>
+                    <p>Students get their hands dirty assembling real PCs from scratch, learning how CPUs, RAM, and
+                        storage cooperate.</p>
+                </article>
+                <article class="grid-item">
+                    <h3>Soldering & Electronics</h3>
+                    <p>Introducing fundamental hardware engineering and circuit construction using safe, guided
+                        soldering techniques.</p>
+                </article>
+                <article class="grid-item">
+                    <h3>Basic Cybersecurity</h3>
+                    <p>Teaching vital digital hygiene, secure coding habits, and safe network navigation principles from
+                        day one.</p>
+                </article>
+                <article class="grid-item">
+                    <h3>Tech Recycling</h3>
+                    <p>Putting old tech to use! We collect discarded computers, tablets, and phones to serve as active
+                        learning instruments.</p>
+                </article>
+            </div>
+        </section>
     </main>
+
     <footer>
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms of Service</a>
-        <div class="social-media">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
+        <p>&copy; 2026 Tech4Kids Organization. All rights reserved.</p>
+        <div class="social-links">
+            <a href="https://facebook.com" target="_blank">Facebook</a> |
+            <a href="https://twitter.com" target="_blank">Twitter</a> |
+            <a href="https://instagram.com" target="_blank">Instagram</a>
         </div>
     </footer>
-    <script src="scripts.js"></script>
+
+    <script src="js/main.js"></script>
 </body>
 
 </html>

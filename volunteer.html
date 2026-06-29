@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Involved | Tech4Kids</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo"><a href="index.html">Tech4Kids</a></div>
+        <button class="hamburger-menu" aria-label="Toggle Menu"><span class="bar"></span><span class="bar"></span><span
+                class="bar"></span></button>
+        <nav class="nav-links">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="learning.html">Learning Resources</a></li>
+                <li><a href="donations.html">Donations</a></li>
+                <li><a href="volunteer.html" class="active">Get Involved</a></li>
+                <li><a href="faqs.html">FAQs</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="form-intro">
+            <h1>Join the Program</h1>
+            <p>Register as a mentor or apply for your child's student admission space below.</p>
+            <img src="images/volunteer-team.jpg" alt="Instructor assisting a student" class="page-image">
+        </section>
+
+        <section class="form-section">
+            <form action="#" method="POST">
+
+                <fieldset>
+                    <legend>Personal Details</legend>
+                    <p>
+                        <label for="fname">First Name:</label>
+                        <input type="text" id="fname" name="firstname" required> (Input 1)
+                    </p>
+                    <p>
+                        <label for="lname">Last Name:</label>
+                        <input type="text" id="lname" name="lastname" required> (Input 2)
+                    </p>
+                    <p>
+                        <label for="useremail">Email Address:</label>
+                        <input type="email" id="useremail" name="email" required> (Input 3)
+                    </p>
+                    <p>
+                        <label for="userphone">Phone Number:</label>
+                        <input type="tel" id="userphone" name="phone"> (Input 4)
+                    </p>
+                    <p>
+                        <label for="usercity">City:</label>
+                        <input type="text" id="usercity" name="city"> (Input 5)
+                    </p>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Program Preferences</legend>
+                    <p>
+                        <label for="startdate">Preferred Start Date:</label>
+                        <input type="date" id="startdate" name="start_date"> (Input 6)
+                    </p>
+                    <p>
+                        <label for="userrole">Applying As:</label>
+                        <select id="userrole" name="role">
+                            <option value="student">Student Participant</option>
+                            <option value="volunteer">Volunteer Instructor</option>
+                            <option value="donor">Corporate Partner</option>
+                        </select> (Input 7)
+                    </p>
+                    <p>
+                        <label for="experience">Years of Tech Experience:</label>
+                        <input type="number" id="experience" name="years_exp" min="0"> (Input 8)
+                    </p>
+                    <p>
+                        <label for="bgcheck">Willing to complete background verification check?</label>
+                        <input type="checkbox" id="bgcheck" name="background_check" value="yes"> (Input 9)
+                    </p>
+                    <p>
+                        <label for="comments">Special Accommodations or Notes:</label>
+                        <textarea id="comments" name="user_comments" rows="4" cols="30"></textarea> (Input 10)
+                    </p>
+                </fieldset>
+
+                <div class="form-submit">
+                    <button type="submit" class="cta-button">Submit Registration Application</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Tech4Kids Organization. All rights reserved.</p>
+        <div class="social-links">
+            <a href="#">Facebook</a> | <a href="#">Twitter</a> | <a href="#">Instagram</a>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
