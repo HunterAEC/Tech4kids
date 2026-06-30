@@ -1,34 +1,12 @@
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FAQs | Tech4Kids</title>
+    <title>Learning Articles | Tech4Kids</title>
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<main id="main">
-    <section class="section-center">
-        <h1>Get Involved With Us</h1>
-        <p>Submit your application parameters below to connect with our lab team.</p>
-    </section>
-
-    <section class="form-section">
-        <form action="#" method="POST">
-            <label for="fname">First Name</label>
-            <input type="text" id="fname" name="firstname" autocomplete="given-name" required>
-
-            <label for="email">Email Address</label>
-            <input type="email" id="email" name="useremail" autocomplete="email" required>
-
-            <label for="message">Message / Notes</label>
-            <textarea id="message" name="usermessage" rows="5" required></textarea>
-
-            <button type="submit" class="cta-button">Submit Details</button>
-        </form>
-    </section>
-</main>
 
 <body>
 
@@ -53,10 +31,9 @@
             <nav class="nav-menu" id="nav-menu">
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="learning.html">Learning Resources</a></li>
+                    <li><a href="learning.html" class="active">Learning Resources</a></li>
                     <li><a href="donations.html">Donations</a></li>
                     <li><a href="volunteer.html">Get Involved</a></li>
-                    <li><a href="faqs.html" class="active">FAQs</a></li>
                     <li><a href="contact.html">Contact Us</a></li>
                 </ul>
             </nav>
@@ -64,10 +41,10 @@
     </header>
 
     <main id="main">
-        <section class="faq-intro" style="text-align: center; margin-bottom: 2rem;">
-            <h1>Frequently Asked Questions</h1>
-            <p>Have questions about our technology learning programs, hardware requirements, or how to get involved?
-                Find quick answers below.</p>
+        <section class="resources-intro" style="text-align: center; margin-bottom: 2rem;">
+            <h1>Learning Articles & Resources</h1>
+            <p>Explore our latest guides, projects, and tips to help kids navigate the digital world safely and
+                creatively.</p>
 
             <img src="images/pexels-delot-18471530.jpg"
                 alt="A tech hardware development and circuit assembly workstation layout" class="page-image"
@@ -77,62 +54,48 @@
 
         <hr>
 
-        <section class="faq-section" style="max-width: 800px; margin: 2.5rem auto; padding: 0 1rem;">
+        <!-- New Articles Section -->
+        <section class="articles-section" style="max-width: 800px; margin: 2.5rem auto; padding: 0 1rem;">
 
-            <div class="faq-item" style="margin-bottom: 2rem; padding-bottom: 1.5rem; border-bottom: 1px solid #eee;">
-                <h3 style="color: var(--primary-color); margin-bottom: 0.5rem;">What age group are the Tech4Kids modules
-                    designed for?</h3>
-                <p>Our programs are structured primarily for students aged 8 to 15, with entry-level tracks for block
-                    programming and advanced paths for physical hardware builds.</p>
-            </div>
+            <article class="article-item"
+                style="margin-bottom: 2.5rem; padding-bottom: 2rem; border-bottom: 1px solid #eee;">
+                <span
+                    style="font-weight: bold; text-transform: uppercase; font-size: 0.85rem; color: #666; display: block; margin-bottom: 0.25rem;">Coding</span>
+                <h3 style="color: var(--primary-color); margin-top: 0; margin-bottom: 0.75rem;">Scratch vs. Python:
+                    Where Should a Beginner Start?</h3>
+                <p style="margin-bottom: 1rem;">Want to make your own video games but don't know where to begin? We
+                    break down the differences between drag-and-drop block coding and writing text, helping you choose
+                    the perfect starting point for your first project.</p>
+                <a href="#" style="font-weight: bold; color: var(--primary-color); text-decoration: none;">[Read the
+                    Coding Guide →]</a>
+            </article>
 
-            <div class="faq-item" style="margin-bottom: 2rem; padding-bottom: 1.5rem; border-bottom: 1px solid #eee;">
-                <h3 style="color: var(--primary-color); margin-bottom: 0.5rem;">Are there any costs or fees associated
-                    with the training paths?</h3>
-                <p>No, all our online learning interactive resources, laboratory configurations, and video classes are
-                    completely free to public students worldwide.</p>
-            </div>
+            <article class="article-item"
+                style="margin-bottom: 2.5rem; padding-bottom: 2rem; border-bottom: 1px solid #eee;">
+                <span
+                    style="font-weight: bold; text-transform: uppercase; font-size: 0.85rem; color: #666; display: block; margin-bottom: 0.25rem;">DIY
+                    / Hardware</span>
+                <h3 style="color: var(--primary-color); margin-top: 0; margin-bottom: 0.75rem;">5 Awesome Things You Can
+                    Do with a micro:bit Under $25</h3>
+                <p style="margin-bottom: 1rem;">This pocket-sized computer is a powerhouse. Learn how to program it to
+                    become a digital watch, a step counter, or even a secret alarm system for your bedroom door.</p>
+                <a href="#" style="font-weight: bold; color: var(--primary-color); text-decoration: none;">[See the
+                    Projects →]</a>
+            </article>
 
-            <div class="faq-item" style="margin-bottom: 2rem; padding-bottom: 1.5rem; border-bottom: 1px solid #eee;">
-                <h3 style="color: var(--primary-color); margin-bottom: 0.5rem;">How can I track student lab completion
-                    checkpoints?</h3>
-                <p>Each video resource includes timestamp guides so students can systematically pause, evaluate their
-                    configuration milestones, and debug physical parts alongside our instructions.</p>
-            </div>
+            <article class="article-item"
+                style="margin-bottom: 2.5rem; padding-bottom: 2rem; border-bottom: 1px solid #eee;">
+                <span
+                    style="font-weight: bold; text-transform: uppercase; font-size: 0.85rem; color: #666; display: block; margin-bottom: 0.25rem;">Digital
+                    Safety / Media Literacy</span>
+                <h3 style="color: var(--primary-color); margin-top: 0; margin-bottom: 0.75rem;">How to Spot a "Fake
+                    News" Story: A Kid’s Guide to the Internet</h3>
+                <p style="margin-bottom: 1rem;">Not everything online is true! Become a digital detective with these
+                    three simple tricks to verify facts, spot doctored images, and browse the web with confidence.</p>
+                <a href="#" style="font-weight: bold; color: var(--primary-color); text-decoration: none;">[Become a
+                    Digital Detective →]</a>
+            </article>
 
-        </section>
-
-        <hr>
-
-        <section class="faq-videos" style="max-width: 800px; margin: 3rem auto; padding: 0 1rem;">
-            <h2 style="text-align: center; margin-bottom: 2rem; color: var(--primary-color);">Introductory Class
-                Previews</h2>
-
-            <div style="display: flex; flex-direction: column; gap: 2.5rem; align-items: center;">
-                <div style="width: 100%; max-width: 560px;">
-                    <h4 style="margin-bottom: 0.75rem; color: #333;">Module 1: Programming Basic Concepts</h4>
-                    <div
-                        style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.06);">
-                        <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;"
-                            src="https://www.youtube.com/embed/_j4Lj-BT00g?si=mczd6k82R3J5apLQ"
-                            title="Programming for kids - Basic concepts"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    </div>
-                </div>
-
-                <div style="width: 100%; max-width: 560px;">
-                    <h4 style="margin-bottom: 0.75rem; color: #333;">Module 2: Introduction to Block Coding</h4>
-                    <div
-                        style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.06);">
-                        <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;"
-                            src="https://www.youtube.com/embed/HGvv7aMyC-s?si=M2CoBi3SvZGue7iA"
-                            title="Programming for kids - Block Programming"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    </div>
-                </div>
-            </div>
         </section>
     </main>
 
@@ -152,3 +115,5 @@
 </body>
 
 </html>
+
+```
