@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body style="background-color: #f1f5f9; color: #0f172a;">
 
     <a href="#main" class="skip-link">Skip to Main Content</a>
 
@@ -82,32 +82,79 @@
             <div style="text-align: center; margin-bottom: 1.5rem;">
                 <h3>Book Entry or Consultation</h3>
             </div>
-            <form action="#" method="POST">
-                <label for="fname">First Name</label>
-                <input type="text" id="fname" name="firstname" autocomplete="given-name" required>
 
-                <label for="email">Email Address</label>
-                <input type="email" id="email" name="useremail" autocomplete="email" required>
+            <form action="#" method="POST" style="max-width: 600px; margin: 0 auto;">
 
-                <label for="start-date">Preferred Start / Orientation Date</label>
-                <input type="date" id="start-date" name="startdate" value="2026-07-08" required>
+                <fieldset
+                    style="border: 1px solid #cbd5e1; border-radius: 8px; padding: 1.5rem; margin-bottom: 2rem; background-color: #ffffff;">
+                    <legend style="font-weight: 700; color: #0f172a; padding: 0 0.5rem;">Personal Profile</legend>
 
-                <label for="message">Message / Notes</label>
-                <textarea id="message" name="usermessage" rows="5" required></textarea>
+                    <label for="fname">First Name</label>
+                    <input type="text" id="fname" name="firstname" autocomplete="given-name" required> <label
+                        for="lname">Last Name</label>
+                    <input type="text" id="lname" name="lastname" autocomplete="family-name" required> <label
+                        for="email">Email Address</label>
+                    <input type="email" id="email" name="useremail" autocomplete="email" required> <label
+                        for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="userphone" autocomplete="tel"> <label for="age-group">Participant
+                        Age Group</label>
+                    <select id="age-group" name="agegroup">
+                        <option value="6-9">6 - 9 years old</option>
+                        <option value="10-13">10 - 13 years old</option>
+                        <option value="14-17">14 - 17 years old</option>
+                        <option value="adult">Adult Volunteer / Parent</option>
+                    </select>
+                </fieldset>
 
-                <button type="submit" class="cta-button">Submit Details</button>
+                <fieldset
+                    style="border: 1px solid #cbd5e1; border-radius: 8px; padding: 1.5rem; margin-bottom: 2rem; background-color: #ffffff;">
+                    <legend style="font-weight: 700; color: #0f172a; padding: 0 0.5rem;">Program Preferences</legend>
+
+                    <label for="interest-track">Primary Tech Interest</label>
+                    <select id="interest-track" name="interesttrack">
+                        <option value="coding">Coding & Game Development</option>
+                        <option value="cybersecurity">Cybersecurity & Safety</option>
+                        <option value="hardware">Robotics & Computer Hardware</option>
+                    </select>
+
+                    <label for="start-date">Preferred Start / Orientation Date</label>
+                    <input type="date" id="start-date" name="startdate" value="2026-07-08" required> <label
+                        for="experience">Prior Coding Experience?</label>
+                    <select id="experience" name="priorexperience">
+                        <option value="none">Beginner (No experience)</option>
+                        <option value="intermediate">Intermediate (Some Scratch/Blocks)</option>
+                        <option value="advanced">Advanced (Python/HTML/JS)</option>
+                    </select>
+
+                    <label for="hear-about">How did you hear about us?</label>
+                    <input type="text" id="hear-about" name="hearabout" placeholder="School, friend, social media...">
+                    <label for="message">Message / Notes</label>
+                    <textarea id="message" name="usermessage" rows="4" required
+                        placeholder="Tell us what you want to achieve..."></textarea>
+                </fieldset>
+
+                <button type="submit" class="cta-button" style="width: 100%;">Submit Details</button>
             </form>
         </section>
 
         <hr style="border: 0; border-top: 1px solid var(--border-color); max-width: 600px; margin: 3.5rem auto;">
 
-        <section class="partners-section" style="max-width: 800px; margin: 0 auto;">
+        <section class="partners-section" style="max-width: 800px; margin: 0 auto 4rem auto;">
             <h2>Other Wonderful Charities for Kids</h2>
             <ul>
                 <li><a href="https://www.unicef.org" target="_blank" rel="noopener">UNICEF Official Site</a></li>
                 <li><a href="https://www.savethechildren.org" target="_blank" rel="noopener">Save the Children</a></li>
                 <li><a href="https://www.bgca.org" target="_blank" rel="noopener">Boys & Girls Clubs of America</a></li>
             </ul>
+        </section>
+
+        <section class="design-help-section"
+            style="max-width: 600px; margin: 3.5rem auto; padding: 1.5rem; background-color: #fef2f2; border-left: 4px solid #ef4444; border-radius: 4px; text-align: center;">
+            <h2 style="color: #991b1b; margin-top: 0; margin-bottom: 0.5rem; font-size: 1.25rem;">Graphic Design Help
+                Needed!!!!!</h2>
+            <p style="color: #7f1d1d; margin-bottom: 0;">Are you a digital artist or layout specialist? Our project
+                interfaces and visual guidelines are growing fast! Connect with our media pipeline team using the form
+                above to volunteer your creative skill sets.</p>
         </section>
     </main>
 
@@ -128,11 +175,9 @@
     <script>
         const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
-        // Setup initial default calendar tracking index to July 2026
         let currentMonthIndex = 6;
         let currentYearIndex = 2026;
 
-        // Custom static mock events matching configuration requests
         const staticEvents = {
             "2026-07-08": { label: "Lab Intro", color: "#16a34a", bg: "#f0fdf4" },
             "2026-07-22": { label: "Python Unit", color: "#2563eb", bg: "#eff6ff" }
@@ -150,7 +195,6 @@
             const totalDaysInMonth = new Date(year, month + 1, 0).getDate();
             const totalDaysInPrevMonth = new Date(year, month, 0).getDate();
 
-            // 1. Render days from previous overlapping week segment
             for (let i = firstDayIndex; i > 0; i--) {
                 const dayDiv = document.createElement("div");
                 dayDiv.style.cssText = "color: #cbd5e1; padding: 0.5rem; border-right: 1px solid #f1f5f9; border-bottom: 1px solid #f1f5f9; text-align: right;";
@@ -158,24 +202,20 @@
                 daysGrid.appendChild(dayDiv);
             }
 
-            // 2. Render core active current month sequence
             for (let day = 1; day <= totalDaysInMonth; day++) {
                 const dayDiv = document.createElement("div");
                 dayDiv.style.cssText = "padding: 0.5rem; border-right: 1px solid #f1f5f9; border-bottom: 1px solid #f1f5f9; text-align: right; cursor: pointer; position: relative; transition: background 0.2s;";
 
-                // Track clean timestamp key strings formatted as YYYY-MM-DD
                 const formattedMonth = String(month + 1).padStart(2, '0');
                 const formattedDay = String(day).padStart(2, '0');
                 const dateKeyString = `${year}-${formattedMonth}-${formattedDay}`;
 
                 dayDiv.setAttribute("data-date", dateKeyString);
 
-                // Inline structure for day numbers
                 const numSpan = document.createElement("span");
                 numSpan.textContent = day;
                 dayDiv.appendChild(numSpan);
 
-                // Apply special color themes if matching configured event items
                 if (staticEvents[dateKeyString]) {
                     dayDiv.style.backgroundColor = staticEvents[dateKeyString].bg;
                     const eventBadge = document.createElement("div");
@@ -184,14 +224,11 @@
                     dayDiv.appendChild(eventBadge);
                 }
 
-                // Append simple box hover visual highlights
                 dayDiv.addEventListener("mouseenter", () => { if (!staticEvents[dateKeyString]) dayDiv.style.backgroundColor = "#f8fafc"; });
                 dayDiv.addEventListener("mouseleave", () => { if (!staticEvents[dateKeyString]) dayDiv.style.backgroundColor = "transparent"; });
 
-                // Click event action to pass parameters automatically down into input forms
                 dayDiv.addEventListener("click", () => {
                     formDateField.value = dateKeyString;
-                    // Provide short focus effect on submission block area
                     formDateField.scrollIntoView({ behavior: 'smooth', block: 'center' });
                     formDateField.style.outline = "2px solid #2563eb";
                     setTimeout(() => formDateField.style.outline = "none", 1000);
@@ -200,7 +237,6 @@
                 daysGrid.appendChild(dayDiv);
             }
 
-            // 3. Render placeholder days filling out remaining grid boxes
             const remainingGridSlots = 42 - (firstDayIndex + totalDaysInMonth);
             for (let j = 1; j <= remainingGridSlots; j++) {
                 const dayDiv = document.createElement("div");
@@ -210,7 +246,6 @@
             }
         }
 
-        // Initialize click actions for cycling previous and next panels
         document.getElementById("prevMonth").addEventListener("click", () => {
             currentMonthIndex--;
             if (currentMonthIndex < 0) {
@@ -229,11 +264,8 @@
             renderCalendarDashboard(currentMonthIndex, currentYearIndex);
         });
 
-        // Initialize target render cycle onload layout pass
         renderCalendarDashboard(currentMonthIndex, currentYearIndex);
     </script>
 </body>
 
 </html>
-
-```
