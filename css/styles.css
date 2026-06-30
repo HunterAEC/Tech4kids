@@ -1,24 +1,14 @@
-/* ==========================================================================
-   1. GLOBAL SYSTEM DESIGN VARIABLES & RESETS
-   ========================================================================== */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800;900&family=Open+Sans:wght@400;600&display=swap');
 
 :root {
     --primary-color: #750A0A;
-    /* Classic Deep Maroon Red */
     --accent-color: #64748B;
-    /* Slate Silver Gray */
     --cta-color: #0F172A;
-    /* Dark Charcoal Black */
     --bg-light: #F8FAFC;
-    /* Clean Soft Background */
     --white: #FFFFFF;
-    /* Pure Crisp White */
     --text-dark: #334155;
-    /* Readable Core Text Body */
 }
 
-/* Reset baseline layout box styles cleanly */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -41,7 +31,6 @@ h4,
     color: var(--cta-color);
 }
 
-/* Base formatting spacing elements */
 main {
     padding: 2.5rem 1.5rem;
     max-width: 1200px;
@@ -55,39 +44,29 @@ hr {
     margin: 2.5rem 0;
 }
 
-/* Global Content Layout Image Constraints (Cut down by 60%) */
 .page-image {
     max-width: 40%;
-    /* 40% width for general sub-pages */
     height: auto;
     border-radius: 8px;
     margin: 1.5rem auto;
-    /* Centered using auto margins */
     display: block;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 }
 
-/* Specific Home Page Image Overrides (Reduced by an additional 50%) */
 .home-image {
     max-width: 20%;
-    /* Brought down to 20% width to fix home size scaling */
     height: auto;
     border-radius: 8px;
     margin: 1.5rem auto;
-    /* Clean layout auto-centering */
     display: block;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 }
 
-/* ==========================================================================
-   2. GLOBAL HEADER NAVIGATION MATRIX
-   ========================================================================== */
 header {
     background-color: var(--primary-color);
     position: sticky;
     top: 0;
     z-index: 1050;
-    /* Sits cleanly above Bootstrap elements */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
     padding: 0.75rem 0;
 }
@@ -106,7 +85,6 @@ header {
     display: block;
 }
 
-/* Responsive Structural Menu Links Grid */
 .nav-menu ul {
     list-style: none;
     display: flex;
@@ -130,7 +108,6 @@ header {
     background-color: rgba(0, 0, 0, 0.2);
 }
 
-/* Mobile Hamburger Component Setup */
 .hamburger {
     display: none;
     background: none;
@@ -149,14 +126,10 @@ header {
     transition: all 0.3s ease;
 }
 
-/* ==========================================================================
-   3. DONATIONS INTERACTIVE DATA TABLE
-   ========================================================================== */
 .table-section {
     margin: 2rem 0;
 }
 
-/* Wraps table for seamless fluid swipe gestures on small viewports */
 .table-responsive-container {
     width: 100%;
     overflow-x: auto;
@@ -172,7 +145,6 @@ table {
     background-color: var(--white);
     text-align: left;
     min-width: 600px;
-    /* Ensures clean text spacing on swipe */
 }
 
 th,
@@ -195,9 +167,6 @@ tbody tr:hover {
     background-color: #F1F5F9;
 }
 
-/* ==========================================================================
-   4. VOLUNTEER STRUCTURAL REGISTRATION FORM
-   ========================================================================== */
 .form-section {
     background-color: var(--white);
     padding: 2rem;
@@ -233,7 +202,6 @@ label {
     font-size: 0.9rem;
 }
 
-/* Uniform inputs layout matrix */
 input[type="text"],
 input[type="email"],
 input[type="tel"],
@@ -259,7 +227,6 @@ textarea:focus {
     box-shadow: 0 0 0 3px rgba(117, 10, 10, 0.15);
 }
 
-/* Handle specialized inputs smoothly */
 form p:has(input[type="checkbox"]) {
     flex-direction: row;
     align-items: center;
@@ -273,7 +240,6 @@ input[type="checkbox"] {
     cursor: pointer;
 }
 
-/* Core Functional Call-To-Action Button styling */
 .cta-button {
     background-color: var(--primary-color);
     color: var(--white);
@@ -291,9 +257,86 @@ input[type="checkbox"] {
     background-color: #520707;
 }
 
-/* ==========================================================================
-   5. UNIFORM GLOBAL COMPONENT FOOTER
-   ========================================================================== */
+.faq-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.faq-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.accordion-container {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.faq-item {
+    background-color: var(--white);
+    border: 1px solid #E2E8F0;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+}
+
+.accordion-trigger,
+.accordion-panel p {
+    font-size: 1.05rem;
+    line-height: 1.5;
+}
+
+.accordion-trigger {
+    width: 100%;
+    background: none;
+    border: none;
+    text-align: left;
+    padding: 1.25rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: var(--cta-color);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    transition: background-color 0.2s;
+}
+
+.accordion-trigger:hover {
+    background-color: #F8FAFC;
+    color: var(--primary-color);
+}
+
+.accordion-trigger::after {
+    content: '+';
+    font-size: 1.25rem;
+    color: var(--accent-color);
+}
+
+.faq-item.active .accordion-trigger::after {
+    content: '−';
+}
+
+.accordion-panel {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    background-color: #FCFDFE;
+}
+
+.accordion-panel p {
+    padding: 0 1.25rem 1.25rem 1.25rem;
+    color: var(--text-dark);
+}
+
+.faq-item.active .accordion-panel {
+    max-height: 500px;
+}
+
 footer {
     background-color: var(--cta-color);
     color: #94A3B8;
@@ -328,19 +371,13 @@ footer p {
     color: var(--white);
 }
 
-/* ==========================================================================
-   6. RESPONSIVE MOBILE MEDIA QUERY OVERRIDES
-   ========================================================================== */
 @media (max-width: 768px) {
-
-    /* Engage the interactive mobile header interface layout matrix */
     .hamburger {
         display: flex;
     }
 
     .nav-menu {
         display: none;
-        /* Controlled interactively using your js/main.js logic */
         width: 100%;
         position: absolute;
         top: 100%;
@@ -371,20 +408,15 @@ footer p {
         border-radius: 0;
     }
 
-    /* Override smaller image dimensions on narrow mobile displays */
     .page-image {
         max-width: 90%;
     }
 
     .home-image {
         max-width: 80%;
-        /* Expands nicely for clear sightlines on small mobile viewports */
     }
 }
 
-/* ==========================================================================
-   7. PRINT MODE OVERRIDES
-   ========================================================================== */
 @media print {
     body {
         background: white;
