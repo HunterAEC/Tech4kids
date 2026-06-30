@@ -1,407 +1,391 @@
-/* --- Google Fonts Import (Fulfills project font requirements) --- */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&family=Roboto+Mono&display=swap');
+/* ==========================================================================
+   1. GLOBAL SYSTEM DESIGN VARIABLES & RESETS
+   ========================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800;900&family=Open+Sans:wght@400;600&display=swap');
 
-/* --- Root Variables Configuration --- */
 :root {
-    /* Your exact specified color palette */
     --primary-color: #750A0A;
-    --secondary-color: #F8FAFC;
+    /* Classic Deep Maroon Red */
     --accent-color: #64748B;
+    /* Slate Silver Gray */
     --cta-color: #0F172A;
+    /* Dark Charcoal Black */
+    --bg-light: #F8FAFC;
+    /* Clean Soft Background */
     --white: #FFFFFF;
+    /* Pure Crisp White */
+    --text-dark: #334155;
+    /* Readable Core Text Body */
 }
 
-/* --- Global & Base Settings (Using em units & active whitespace) --- */
+/* Reset baseline layout box styles cleanly */
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-    /* Font families with at least 2 fallbacks */
-    font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: var(--secondary-color);
-    color: var(--cta-color);
+    font-family: 'Open Sans', sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
     line-height: 1.6;
 }
 
 h1,
 h2,
-h3 {
-    font-family: 'Montserrat', 'Arial Black', sans-serif;
-    margin-bottom: 0.5em;
-    /* Passive Whitespace */
+h3,
+h4,
+.logo-link {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--cta-color);
 }
 
-p {
-    font-family: 'Open Sans', Verdana, sans-serif;
-    margin-bottom: 1.2em;
-}
-
-img.page-image {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 1.5em auto;
-    /* Active Whitespace spacing */
-    border-radius: 4px;
-}
-
-/* --- Global Header & Layout Core --- */
-header {
-    background-color: var(--primary-color);
-    color: var(--white);
-    padding: 1em 2em;
-    /* Flexible relative units */
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-.header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 75em;
+/* Base formatting spacing elements */
+main {
+    padding: 2.5rem 1.5rem;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
-.logo a {
-    color: var(--white);
-    font-size: 1.5em;
-    font-weight: 700;
-    text-decoration: none;
+hr {
+    border: 0;
+    height: 1px;
+    background: #E2E8F0;
+    margin: 2.5rem 0;
 }
 
-/* --- Navigation & Hover Settings --- */
-.nav-menu ul {
+/* Global Content Layout Image Constraints (Cut down by 60%) */
+.page-image {
+    max-width: 40%;
+    /* Reduced by 60%, leaving it at 40% width */
+    height: auto;
+    border-radius: 8px;
+    margin: 1.5rem auto;
+    /* Centered using auto margins */
+    display: block;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* ==========================================================================
+   2. GLOBAL HEADER NAVIGATION MATRIX
+   ========================================================================== */
+header {
+    background-color: var(--primary-color);
+    position: sticky;
+    top: 0;
+    z-index: 1050;
+    /* Sits cleanly above Bootstrap elements */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    padding: 0.75rem 0;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
     display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.nav-menu li {
-    margin-left: 1.5em;
+.logo a {
+    text-decoration: none;
+    display: block;
+}
+
+/* Responsive Structural Menu Links Grid */
+.nav-menu ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
 }
 
 .nav-menu a {
-    color: var(--white);
+    color: rgba(255, 255, 255, 0.85);
     text-decoration: none;
-    font-size: 1.1em;
     font-weight: 600;
-    transition: color 0.3s ease;
+    font-size: 0.95rem;
+    padding: 0.5rem 0.75rem;
+    border-radius: 4px;
+    transition: all 0.25s ease-in-out;
 }
 
-/* Hover Selectors requirement */
 .nav-menu a:hover,
 .nav-menu a.active {
-    color: var(--accent-color);
+    color: var(--white);
+    background-color: rgba(0, 0, 0, 0.2);
 }
 
-/* --- Hamburger Icon Configuration --- */
+/* Mobile Hamburger Component Setup */
 .hamburger {
     display: none;
-    /* Hidden by default on desktops */
-    cursor: pointer;
-    background: transparent;
+    background: none;
     border: none;
+    cursor: pointer;
     flex-direction: column;
-    justify-content: space-between;
-    width: 30px;
-    height: 21px;
-    padding: 0;
+    gap: 5px;
+    padding: 0.5rem;
 }
 
 .hamburger .bar {
+    width: 25px;
     height: 3px;
-    width: 100%;
     background-color: var(--white);
-    border-radius: 10px;
-    transition: all 0.3s ease-in-out;
+    border-radius: 2px;
+    transition: all 0.3s ease;
 }
 
-/* --- Main Layout Sections --- */
-main {
-    max-width: 75em;
-    margin: 2em auto;
-    /* Balanced Active Whitespace */
-    padding: 0 1.5em;
+/* ==========================================================================
+   3. DONATIONS INTERACTIVE DATA TABLE
+   ========================================================================== */
+.table-section {
+    margin: 2rem 0;
 }
 
-.hero-banner {
-    text-align: center;
-    padding: 5em 1em;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/hero-background.jpg');
-    background-size: cover;
-    background-position: center;
-    color: var(--white);
+/* Wraps table for seamless fluid swipe gestures on small viewports */
+.table-responsive-container {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin-top: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 
-/* --- Home Page CSS Grid Section --- */
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5em;
-    margin-top: 2em;
-}
-
-.grid-item {
-    background: var(--white);
-    padding: 1.5em;
-    border-left: 4px solid var(--primary-color);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-}
-
-/* --- Donations Page Table Styles --- */
 table {
     width: 100%;
     border-collapse: collapse;
-    margin: 2em 0;
+    background-color: var(--white);
+    text-align: left;
+    min-width: 600px;
+    /* Ensures clean text spacing on swipe */
 }
 
 th,
 td {
-    padding: 0.8em;
-    text-align: left;
-    border-bottom: 1px solid var(--accent-color);
+    padding: 1rem 1.25rem;
+    border-bottom: 1px solid #E2E8F0;
 }
 
 th {
     background-color: var(--cta-color);
     color: var(--white);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
 }
 
-/* --- Volunteer Page Form Elements --- */
+tbody tr:hover {
+    background-color: #F1F5F9;
+}
+
+/* ==========================================================================
+   4. VOLUNTEER STRUCTURAL REGISTRATION FORM
+   ========================================================================== */
+.form-section {
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    margin-top: 2rem;
+}
+
 fieldset {
-    border: 1px solid var(--accent-color);
-    border-radius: 4px;
-    padding: 1.5em;
-    margin-bottom: 2em;
+    border: 1px solid #E2E8F0;
+    border-radius: 6px;
+    padding: 1.5rem;
+    margin-bottom: 1.75rem;
 }
 
 legend {
-    font-weight: bold;
-    padding: 0 0.5em;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
     color: var(--primary-color);
+    padding: 0 0.5rem;
+    font-size: 1.1rem;
 }
 
-input,
+form p {
+    margin-bottom: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+label {
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+/* Uniform inputs layout matrix */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+input[type="date"],
 select,
 textarea {
     width: 100%;
-    padding: 0.6em;
-    margin-top: 0.4em;
-    border: 1px solid var(--accent-color);
+    padding: 0.75rem;
+    border: 1px solid #CBD5E1;
     border-radius: 4px;
+    font-family: inherit;
+    font-size: 1rem;
+    color: var(--text-dark);
+    transition: border-color 0.2s;
 }
 
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(117, 10, 10, 0.15);
+}
+
+/* Handle specialized inputs smoothly */
+form p:has(input[type="checkbox"]) {
+    flex-direction: row;
+    align-items: center;
+    gap: 0.75rem;
+    cursor: pointer;
+}
+
+input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+/* Core Functional Call-To-Action Button styling */
 .cta-button {
     background-color: var(--primary-color);
     color: var(--white);
-    padding: 0.8em 2em;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    padding: 0.85rem 2rem;
     border: none;
+    border-radius: 4px;
     cursor: pointer;
-    font-weight: bold;
+    font-size: 1rem;
+    transition: background-color 0.2s ease;
 }
 
 .cta-button:hover {
-    background-color: var(--cta-color);
+    background-color: #520707;
 }
-
-/* --- FAQ Page JavaScript Toggle Styles --- */
-.accordion-trigger {
-    background-color: var(--cta-color);
-    color: var(--white);
-    width: 100%;
-    text-align: left;
-    padding: 1em;
-    border: none;
-    cursor: pointer;
-    margin-top: 0.5em;
-    font-weight: bold;
-}
-
-.accordion-panel {
-    background-color: var(--white);
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.2s ease-out;
-    padding: 0 1em;
-}
-
-/* --- Global Footer Structure --- */
-footer {
-    background-color: var(--cta-color);
-    color: var(--white);
-    text-align: center;
-    padding: 2em 1em;
-    margin-top: 4em;
-}
-
-footer a {
-    color: var(--secondary-color);
-    text-decoration: none;
-}
-
-footer a:hover {
-    color: var(--primary-color);
-}
-
 
 /* ==========================================================================
-   5-VIEWPORT RESPONSIVE DESIGN MEDIA QUERIES (Project Criteria)
+   5. UNIFORM GLOBAL COMPONENT FOOTER
    ========================================================================== */
-
-/* 1. MOBILE DEVICES (Up to 480px) */
-@media screen and (max-width: 30em) {
-    body {
-        font-size: 0.9em;
-    }
-
-    header {
-        padding: 0.8em 1em;
-    }
-
-    .hero-banner {
-        padding: 3em 1em;
-    }
+footer {
+    background-color: var(--cta-color);
+    color: #94A3B8;
+    text-align: center;
+    padding: 3rem 1.5rem;
+    margin-top: 4rem;
 }
 
-/* 2. TABLET DEVICES (481px to 768px - Handles Hamburger Transition) */
-@media screen and (max-width: 48em) {
+footer p {
+    margin-bottom: 1rem;
+}
+
+.footer-contact a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.social-links {
+    margin-top: 1.25rem;
+    font-size: 0.9rem;
+}
+
+.social-links a {
+    color: #CBD5E1;
+    text-decoration: none;
+    margin: 0 0.5rem;
+    transition: color 0.2s;
+}
+
+.social-links a:hover {
+    color: var(--white);
+}
+
+/* ==========================================================================
+   6. RESPONSIVE MOBILE MEDIA QUERY OVERRIDES
+   ========================================================================== */
+@media (max-width: 768px) {
+
+    /* Engage the interactive mobile header interface layout matrix */
     .hamburger {
         display: flex;
-        /* Displays mobile hamburger */
     }
 
     .nav-menu {
+        display: none;
+        /* Controlled interactively using your js/main.js logic */
+        width: 100%;
         position: absolute;
         top: 100%;
         left: 0;
-        right: 0;
         background-color: var(--primary-color);
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.3s ease-in-out;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 1rem 0;
+    }
+
+    .nav-menu.active {
+        display: block;
     }
 
     .nav-menu ul {
         flex-direction: column;
         width: 100%;
-        padding: 1em 0;
-        align-items: center;
+        gap: 0;
     }
 
     .nav-menu li {
-        margin: 0.8em 0;
-        margin-left: 0;
+        width: 100%;
+        text-align: center;
     }
 
-    .nav-menu.active {
-        max-height: 25em;
-        /* Show menu when toggle function runs */
+    .nav-menu a {
+        display: block;
+        padding: 1rem;
+        border-radius: 0;
     }
 
-    /* Hamburger Animation Transitions */
-    .hamburger.active .bar:nth-child(1) {
-        transform: translateY(9px) rotate(45deg);
-    }
-
-    .hamburger.active .bar:nth-child(2) {
-        opacity: 0;
-    }
-
-    .hamburger.active .bar:nth-child(3) {
-        transform: translateY(-9px) rotate(-45deg);
+    /* Override smaller image sizes on mobile screens for readability */
+    .page-image {
+        max-width: 90%;
     }
 }
 
-/* 3. DESKTOP DEVICES (769px to 1024px) */
-@media screen and (min-width: 48.0625em) and (max-width: 64em) {
-    main {
-        padding: 0 2em;
-    }
-}
-
-/* 4. LARGE DESKTOP DEVICES (1025px and up) */
-@media screen and (min-width: 64.0625em) {
-    body {
-        font-size: 1.1em;
-    }
-
-    .header-container,
-    main {
-        max-width: 85em;
-    }
-}
-
-/* 5. PRINT STYLES (When page is printed directly) */
+/* ==========================================================================
+   7. PRINT MODE OVERRIDES
+   ========================================================================== */
 @media print {
     body {
         background: white;
         color: black;
-        font-size: 12pt;
     }
 
     header,
     footer,
     .hamburger,
-    .cta-button,
-    .video-wrapper {
+    .carousel-control-prev,
+    .carousel-control-next,
+    .carousel-indicators,
+    .cta-button {
         display: none !important;
-        /* Strips UI components out for crisp paper printing */
     }
 
     main {
         max-width: 100%;
-        margin: 0;
         padding: 0;
-    }
-
-    a {
-        text-decoration: underline;
-        color: black;
-    }
-}
-
-/* --- Mobile Touch & Responsive Enhancements --- */
-@media screen and (max-width: 48em) {
-
-    /* 1. Scale images gently so they don't crowd mobile screen borders */
-    img.page-image {
-        width: 100%;
-        max-width: 22em;
-        margin: 1em auto;
-    }
-
-    /* 2. Scale form fieldsets down to maximize horizontal visual screen space */
-    fieldset {
-        padding: 1em;
-        margin-bottom: 1.2em;
-    }
-
-    /* 3. Increase clickable target sizes for interactive forms and inputs on mobile */
-    input,
-    select,
-    textarea {
-        padding: 0.8em;
-        /* Gives larger surface area for physical fingers on touch screens */
-        font-size: 1em;
-    }
-
-    /* 4. Responsive Table Optimization */
-    /* Prevents large data tables from breaking or compressing off-screen horizontally */
-    .table-section {
-        width: 100%;
-        overflow-x: auto;
-        /* Generates smooth swipe-scroll bars for small display monitors */
-        -webkit-overflow-scrolling: touch;
-    }
-
-    table {
-        min-width: 500px;
-        /* Forces structure layout integrity without squishing sentences */
     }
 }
