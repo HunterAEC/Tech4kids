@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800;900&family=Open+Sans:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght=400;500;700;800;900&family=Open+Sans:wght=400;600&display=swap');
 
 :root {
     --primary-color: #750A0A;
@@ -44,17 +44,10 @@ hr {
     margin: 2.5rem 0;
 }
 
-.page-image {
-    max-width: 40%;
-    height: auto;
-    border-radius: 8px;
-    margin: 1.5rem auto;
-    display: block;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-}
-
+/* Synchronized Image Classes to Match Contact Page Size */
+.page-image,
 .home-image {
-    max-width: 20%;
+    max-width: 40%;
     height: auto;
     border-radius: 8px;
     margin: 1.5rem auto;
@@ -408,12 +401,10 @@ footer p {
         border-radius: 0;
     }
 
-    .page-image {
-        max-width: 90%;
-    }
-
+    /* Synchronized Mobile Image Sizes */
+    .page-image,
     .home-image {
-        max-width: 80%;
+        max-width: 90%;
     }
 }
 
