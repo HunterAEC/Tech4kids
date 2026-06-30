@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 60" width="320" height="60">
+  <path d="M15 18 L5 30 L15 42" fill="none" stroke="#750A0A" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="20" cy="30" r="5" fill="#64748B" />
+  <line x1="25" y1="30" x2="40" y2="30" stroke="#64748B" stroke-width="3" />
+  <path d="M45 18 L55 30 L45 42" fill="none" stroke="#750A0A" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <text x="70" y="39" font-family="'Montserrat', sans-serif" font-weight="800" font-size="28" fill="#0F172A" letter-spacing="0.5">Tech</text>
+  
+  <text x="148" y="39" font-family="'Montserrat', sans-serif" font-weight="900" font-size="32" fill="#750A0A">4</text>
+  
+  <text x="172" y="39" font-family="'Montserrat', sans-serif" font-weight="500" font-size="28" fill="#64748B" letter-spacing="0.5">Kids</text>
+</svg>

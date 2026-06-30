@@ -7,30 +7,35 @@
     <title>Home | Tech4Kids</title>
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
 </head>
 
 <body>
 
     <header>
-        <div class="logo">
-            <a href="index.html">Tech4Kids</a>
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo.svg" alt="Tech4Kids Official Logo" style="height: 42px; display: block;">
+                </a>
+            </div>
+
+            <button class="hamburger" id="hamburger-toggle" aria-label="Toggle Navigation Menu" aria-expanded="false">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <nav class="nav-menu" id="nav-menu">
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="learning.html">Learning Resources</a></li>
+                    <li><a href="donations.html">Donations</a></li>
+                    <li><a href="volunteer.html">Get Involved</a></li>
+                    <li><a href="faqs.html">FAQs</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
         </div>
-        <button class="hamburger-menu" aria-label="Toggle Menu" aria-expanded="false">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </button>
-        <nav class="nav-links">
-            <ul>
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="learning.html">Learning Resources</a></li>
-                <li><a href="donations.html">Donations</a></li>
-                <li><a href="volunteer.html">Get Involved</a></li>
-                <li><a href="faqs.html">FAQs</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-        </nav>
     </header>
 
     <section class="hero-banner">
@@ -41,10 +46,12 @@
     <main>
         <section class="about-section">
             <h2>Our Mission</h2>
-            <img src="images/home-kids-tech.jpg" alt="Children working with computer hardware" class="page-image">
+            <img src="images/pexels-delot-18471530.jpg"
+                alt="Tech4Kids clean instructional hardware laboratory and hardware construction workspace"
+                class="page-image">
             <p>Tech4Kids was created with a dream of helping kids learn tech from a young age. We believe it all starts
-                with education. Our hands-on experiences take students beyond the screen, diving deep into hardware,
-                circuits, and online safety.</p>
+                with education. Our interactive, hands-on workshops take students beyond the screen, diving deep into
+                hardware construction, electronic circuit configurations, and basic digital safety.</p>
         </section>
 
         <hr>
@@ -55,22 +62,22 @@
                 <article class="grid-item">
                     <h3>Hands-on Building</h3>
                     <p>Students get their hands dirty assembling real PCs from scratch, learning how CPUs, RAM, and
-                        storage cooperate.</p>
+                        internal storage units cooperate.</p>
                 </article>
                 <article class="grid-item">
                     <h3>Soldering & Electronics</h3>
-                    <p>Introducing fundamental hardware engineering and circuit construction using safe, guided
-                        soldering techniques.</p>
+                    <p>Introducing foundational hardware engineering concepts and circuit construction using completely
+                        safe, guided soldering safety profiles.</p>
                 </article>
                 <article class="grid-item">
                     <h3>Basic Cybersecurity</h3>
-                    <p>Teaching vital digital hygiene, secure coding habits, and safe network navigation principles from
-                        day one.</p>
+                    <p>Teaching vital digital hygiene, secure file sharing habits, network structures, and safe online
+                        navigation rules from day one.</p>
                 </article>
                 <article class="grid-item">
                     <h3>Tech Recycling</h3>
-                    <p>Putting old tech to use! We collect discarded computers, tablets, and phones to serve as active
-                        learning instruments.</p>
+                    <p>Putting old tech to use! We gather discarded laptops, tablets, and phones to serve as direct
+                        interactive instruments in our physical learning labs.</p>
                 </article>
             </div>
         </section>
@@ -78,9 +85,12 @@
 
     <footer>
         <p>&copy; 2026 Tech4Kids Organization. All rights reserved.</p>
+        <div class="footer-contact">
+            <p>Contact us: <a href="mailto:ttech4kids@gmail.com">ttech4kids@gmail.com</a></p>
+        </div>
         <div class="social-links">
+            <a href="https://x.com/Tech4kidz26" target="_blank">X (formerly Twitter): @Tech4kidz26</a> |
             <a href="https://facebook.com" target="_blank">Facebook</a> |
-            <a href="https://twitter.com" target="_blank">Twitter</a> |
             <a href="https://instagram.com" target="_blank">Instagram</a>
         </div>
     </footer>
