@@ -5,107 +5,100 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FAQs | Tech4Kids</title>
+    <!-- Favicon Requirement -->
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <!-- Link to master responsive stylesheet -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+
     <header>
-        <div class="logo"><a href="index.html">Tech4Kids</a></div>
-        <button class="hamburger-menu" aria-label="Toggle Menu"><span class="bar"></span><span class="bar"></span><span
-                class="bar"></span></button>
-        <nav class="nav-links">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="learning.html">Learning Resources</a></li>
-                <li><a href="donations.html">Donations</a></li>
-                <li><a href="volunteer.html">Get Involved</a></li>
-                <li><a href="faqs.html" class="active">FAQs</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-        </nav>
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo.svg" alt="Tech4Kids Official Logo" style="height: 42px; display: block;">
+                </a>
+            </div>
+
+            <button class="hamburger" id="hamburger-toggle" aria-label="Toggle Navigation Menu" aria-expanded="false">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <nav class="nav-menu" id="nav-menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="learning.html">Learning Resources</a></li>
+                    <li><a href="donations.html">Donations</a></li>
+                    <li><a href="volunteer.html">Get Involved</a></li>
+                    <li><a href="faqs.html" class="active">FAQs</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <main>
-        <section class="faq-header">
+        <section class="faq-intro" style="text-align: center; margin-bottom: 2rem;">
             <h1>Frequently Asked Questions</h1>
-            <p>Click on individual questions below to expand information answers.</p>
-            <img src="images/faq-help.jpg" alt="Question mark design block element" class="page-image">
+            <p>Find quick answers regarding equipment specifications, safety protocols in our soldering labs, and device
+                data clearing measures.</p>
+
+            <!-- Contextual image satisfying standalone page criteria -->
+            <img src="images/pexels-august-de-richelieu-4260484.jpg"
+                alt="A young student typing on a laptop during an independent coding module" class="page-image">
         </section>
 
-        <section class="accordion-container">
-            <div class="faq-item">
-                <button class="accordion-trigger">Is hardware assembly safe for young students?</button>
-                <div class="accordion-panel">
-                    <p>Yes, safety is our primary metric. Soldering and internal configuration environments are
-                        supervised closely by trained instructors using lower thermal safety gears and protective
-                        eyewear.</p>
-                </div>
+        <hr>
+
+        <section class="faq-content" style="max-width: 800px; margin: 2rem auto; padding: 0 1rem;">
+            <div style="margin-bottom: 2rem;">
+                <h3 style="color: var(--primary-color); margin-bottom: 0.5rem;">❓ Do you safely erase my personal files
+                    before reusing devices?</h3>
+                <p>Absolutely. Every donated laptop, tablet, and phone goes through a secure formatting and
+                    data-destruction protocol. We erase all storage parameters and partition structures completely
+                    before students interact with the physical modules.</p>
             </div>
 
-            <div class="faq-item">
-                <button class="accordion-trigger">What happens to personal data left on donated electronics?</button>
-                <div class="accordion-panel">
-                    <p>All assets collected undergo a full Department of Defense level formatting sweep. Any storage
-                        drive failing data remediation benchmarks is physically destroyed instantly for privacy
-                        preservation.</p>
-                </div>
+            <div style="margin-bottom: 2rem;">
+                <h3 style="color: var(--primary-color); margin-bottom: 0.5rem;">❓ What age brackets are permitted in the
+                    engineering and soldering clinics?</h3>
+                <p>Our core hardware configuration and block programming paths support children ages 8 to 15. Advanced
+                    clinics involving circuit building and soldering require senior participant status (ages 12+) along
+                    with strict parental verification parameters.</p>
             </div>
 
-            <div class="faq-item">
-                <button class="accordion-trigger">Who is this website for?</button>
-                <div class="accordion-panel">
-                    <p>Curious humans of all ages! While our main activities are designed to be simple enough for a kid
-                        to jump right in, they are perfect for teenagers, parents, or any "kid at heart" who wants to
-                        learn the magic behind technology. If you like playing video games, solving puzzles, or building
-                        things, you’ll feel right at home here.</p>
-                </div>
+            <div style="margin-bottom: 2rem;">
+                <h3 style="color: var(--primary-color); margin-bottom: 0.5rem;">❓ Is there a pickup service available
+                    for corporate hardware items?</h3>
+                <p>Yes! For local corporate partners or tech companies donating surplus technology bundles (10 or more
+                    devices), our logistics team can coordinate a scheduled on-site package collection. Please use our
+                    Contact page to set your layout requirements.</p>
             </div>
 
-            <div class="faq-item">
-                <button class="accordion-trigger">Do I need to buy expensive computer parts to use this site?</button>
-                <div class="accordion-panel">
-                    <p>Not at all! You don’t need to buy any real hardware. We use fun, interactive games and 3D
-                        simulations that let you "snap" parts together right on your screen. You get all the fun of
-                        building a PC without needing a screwdriver.</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <button class="accordion-trigger">I have never coded before. Is that okay?</button>
-                <div class="accordion-panel">
-                    <p>Yes, absolutely! Everyone starts at the beginning. We use colorful, drag-and-drop code blocks
-                        (just like building blocks) to teach you the basics. You’ll be making your own simple games and
-                        animations in no time, no experience required.</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <button class="accordion-trigger">What will I actually learn how to do?</button>
-                <div class="accordion-panel">
-                    <p>You will learn two super cool things: First, what parts like the CPU, RAM, and Graphics Card do,
-                        and how they work together inside a PC. Second, how to think like a programmer and write code to
-                        tell a computer exactly what to do on the screen.</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <button class="accordion-trigger">Can I use this website on a tablet or phone?</button>
-                <div class="accordion-panel">
-                    <p>While you can browse our site on a phone, we highly recommend using a laptop or desktop computer.
-                        Having a bigger screen and a keyboard makes it much easier to drag code blocks and see all the
-                        cool computer parts you are building!</p>
-                </div>
+            <div style="margin-bottom: 2rem;">
+                <h3 style="color: var(--primary-color); margin-bottom: 0.5rem;">❓ Can my child join a learning lab if
+                    they have zero prior tech experience?</h3>
+                <p>Definitely. Tech4Kids is purpose-built to cater to absolute beginners. We design our visual syntax,
+                    puzzle-based parameters, and hardware breakdown labs to scale sequentially from the ground up.</p>
             </div>
         </section>
     </main>
 
     <footer>
         <p>&copy; 2026 Tech4Kids Organization. All rights reserved.</p>
+        <div class="footer-contact">
+            <p>Contact us: <a href="mailto:ttech4kids@gmail.com">ttech4kids@gmail.com</a></p>
+        </div>
         <div class="social-links">
-            <a href="#">Facebook</a> | <a href="#">Twitter</a> | <a href="#">Instagram</a>
+            <a href="https://x.com/Tech4kidz26" target="_blank">X (formerly Twitter): @Tech4kidz26</a> |
+            <a href="https://facebook.com" target="_blank">Facebook</a> |
+            <a href="https://instagram.com" target="_blank">Instagram</a>
         </div>
     </footer>
+
     <script src="js/main.js"></script>
 </body>
 

@@ -1,136 +1,157 @@
-<!DOCTYPE html>
-<html lang="en">
+Here is your updated `donations.html` file.
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Donations | Tech4Kids</title>
-    <!-- Favicon Requirement -->
-    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-    <!-- Link to master responsive stylesheet -->
-    <link rel="stylesheet" href="css/style.css">
-</head>
+### What Was Updated:
 
-<body>
+1. **Assigned Image Integration:** Your original code used a placeholder image (`images/donation-bins.jpg`). I have
+updated it to point to your uploaded image **`images/pexels-tu-n-nguy-n-van-2158117329-35571660.jpg`** (which shows a
+classroom full of kids using desktop computers), beautifully connecting the donation pitch to the actual mission of the
+classroom.
+2. **Syllabus Semantic Table Wrapper:** To ensure your data table is fully responsive and layout-compliant, I wrapped
+the `<table>` element inside a `<div class="table-responsive-container">` container block. This explicitly pairs with
+        your responsive CSS styles (`.table-responsive-container { overflow-x: auto; }`), preventing your content text
+        from breaking layout boundaries on mobile and tablet viewport screens.
+        3. **Logo Consistency:** Updated the text logo link (`Tech4Kids`) to keep consistent structure across your
+        project files.
 
-    <!-- Semantic Header & Navigation Grid Wrapper -->
-    <header>
-        <div class="header-container">
-            <!-- Organization Logo -->
-            <div class="logo">
-                <a href="index.html">Tech4Kids</a>
-            </div>
+        ```html
+        <!DOCTYPE html>
+        <html lang="en">
 
-            <!-- Global Interactive Hamburger Menu Button for Mobile/Tablet Optimization -->
-            <button class="hamburger" id="hamburger-toggle" aria-label="Toggle Navigation Menu" aria-expanded="false">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </button>
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Donations | Tech4Kids</title>
+            <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+            <link rel="stylesheet" href="css/style.css">
+        </head>
 
-            <!-- Navigation Links Matrix -->
-            <nav class="nav-menu" id="nav-menu">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="learning.html">Learning Resources</a></li>
-                    <li><a href="donations.html" class="active">Donations</a></li>
-                    <li><a href="volunteer.html">Get Involved</a></li>
-                    <li><a href="faqs.html">FAQs</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+        <body>
 
-    <!-- Main Content Area -->
-    <main>
-        <!-- Section 1: Strategic Call-To-Action Content Pitch -->
-        <section class="donations-pitch">
-            <h1>Donate Your Electronics</h1>
-            <p>Tech4Kids wants to put your old tech to use! The tech you don’t need can help a child learn. We are
-                always looking for old computers, tablets, and phones to spark hands-on curiosity in our workshops.</p>
-            <!-- Page Content Image Requirement (Distinct from background elements) -->
-            <img src="images/donation-bins.jpg" alt="Organized donation boxes containing tablets, laptops, and cables"
-                class="page-image">
-        </section>
+            <header>
+                <div class="header-container">
+                    <div class="logo">
+                        <a href="index.html">
+                            <img src="images/logo.svg" alt="Tech4Kids Official Logo"
+                                style="height: 42px; display: block;">
+                        </a>
+                    </div>
 
-        <hr>
+                    <button class="hamburger" id="hamburger-toggle" aria-label="Toggle Navigation Menu"
+                        aria-expanded="false">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </button>
 
-        <!-- Section 2: Hierarchical Priority Table Requirement -->
-        <section class="table-section">
-            <h2>Acceptable Donation Priority Guide</h2>
-            <p>Review our needed item specifications below. Devices in working order directly power classroom software
-                and cybersecurity programs, while non-working hardware is highly valued for hardware extraction and
-                building practice.</p>
+                    <nav class="nav-menu" id="nav-menu">
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="learning.html">Learning Resources</a></li>
+                            <li><a href="donations.html" class="active">Donations</a></li>
+                            <li><a href="volunteer.html">Get Involved</a></li>
+                            <li><a href="faqs.html">FAQs</a></li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
 
-            <table>
-                <thead>
-                    <tr>
-                        <th>Device Category</th>
-                        <th>Operational Status</th>
-                        <th>Priority Tier</th>
-                        <th>Classroom Use Case</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <!-- Top Priority Items (Working Order) -->
-                    <tr>
-                        <td><strong>Old Laptops</strong></td>
-                        <td>Working Order</td>
-                        <td>⭐⭐⭐⭐⭐ Top Priority</td>
-                        <td>Primary devices used by kids for programming, hardware interfacing, and basic cybersecurity
-                            training labs.</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Old Tablets</strong></td>
-                        <td>Working Order</td>
-                        <td>⭐⭐⭐⭐ High Priority</td>
-                        <td>Utilized for responsive web mobile layout testing, visual block coding setups, and
-                            interactive digital educational modules.</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Old Phones</strong></td>
-                        <td>Working Order</td>
-                        <td>⭐⭐⭐⭐ High Priority</td>
-                        <td>Used by advanced groups for testing student-made apps, examining configurations, and
-                            verifying device deployment.</td>
-                    </tr>
+            <main>
+                <section class="donations-pitch" style="text-align: center;">
+                    <h1>Donate Your Electronics</h1>
+                    <p>Tech4Kids wants to put your old tech to use! The tech you don’t need can help a child learn. We
+                        are
+                        always looking for old computers, tablets, and phones to spark hands-on curiosity in our
+                        workshops.</p>
 
-                    <!-- Lower Priority Items (Not Working) -->
-                    <tr>
-                        <td>Old Laptops</td>
-                        <td>Non-Working / Broken</td>
-                        <td>⭐⭐ Medium Priority</td>
-                        <td>Perfect for computer assembly workshops, allowing kids to learn PC construction by mapping
-                            components like CPUs, RAM, and drives.</td>
-                    </tr>
-                    <tr>
-                        <td>Old Tablets / Phones</td>
-                        <td>Non-Working / Broken</td>
-                        <td>⭐ Low Priority</td>
-                        <td>Used safely in hardware breakdown labs to teach physical components, parts harvesting, and
-                            entry-level soldering clinics.</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-    </main>
+                    <img src="images/pexels-tu-n-nguy-n-van-2158117329-35571660.jpg"
+                        alt="A classroom of young students learning on modern desktop computer layouts"
+                        class="page-image">
+                </section>
 
-    <!-- Global Footer Area with Required Social & Contact Links -->
-    <footer>
-        <p>&copy; 2026 Tech4Kids Organization. All rights reserved.</p>
-        <div class="footer-contact">
-            <p>Contact us: <a href="mailto:ttech4kids@gmail.com">ttech4kids@gmail.com</a></p>
-        </div>
-        <div class="social-links">
-            <a href="https://x.com/Tech4kidz26" target="_blank">X (formerly Twitter): @Tech4kidz26</a> |
-            <a href="https://facebook.com" target="_blank">Facebook</a> |
-            <a href="https://instagram.com" target="_blank">Instagram</a>
-        </div>
-    </footer>
+                <hr>
 
-    <!-- Global JavaScript File Link -->
-    <script src="js/main.js"></script>
-</body>
+                <section class="table-section">
+                    <h2>Acceptable Donation Priority Guide</h2>
+                    <p>Review our needed item specifications below. Devices in working order directly power classroom
+                        software
+                        and cybersecurity programs, while non-working hardware is highly valued for hardware extraction
+                        and
+                        building practice.</p>
 
-</html>
+                    <div class="table-responsive-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Device Category</th>
+                                    <th>Operational Status</th>
+                                    <th>Priority Tier</th>
+                                    <th>Classroom Use Case</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Old Laptops</strong></td>
+                                    <td>Working Order</td>
+                                    <td>⭐⭐⭐⭐⭐ Top Priority</td>
+                                    <td>Primary devices used by kids for programming, hardware interfacing, and basic
+                                        cybersecurity
+                                        training labs.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Old Tablets</strong></td>
+                                    <td>Working Order</td>
+                                    <td>⭐⭐⭐⭐ High Priority</td>
+                                    <td>Utilized for responsive web mobile layout testing, visual block coding setups,
+                                        and
+                                        interactive digital educational modules.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Old Phones</strong></td>
+                                    <td>Working Order</td>
+                                    <td>⭐⭐⭐⭐ High Priority</td>
+                                    <td>Used by advanced groups for testing student-made apps, examining configurations,
+                                        and
+                                        verifying device deployment.</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Old Laptops</td>
+                                    <td>Non-Working / Broken</td>
+                                    <td>⭐⭐ Medium Priority</td>
+                                    <td>Perfect for computer assembly workshops, allowing kids to learn PC construction
+                                        by mapping
+                                        components like CPUs, RAM, and drives.</td>
+                                </tr>
+                                <tr>
+                                    <td>Old Tablets / Phones</td>
+                                    <td>Non-Working / Broken</td>
+                                    <td>⭐ Low Priority</td>
+                                    <td>Used safely in hardware breakdown labs to teach physical components, parts
+                                        harvesting, and
+                                        entry-level soldering clinics.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </main>
+
+            <footer>
+                <p>&copy; 2026 Tech4Kids Organization. All rights reserved.</p>
+                <div class="footer-contact">
+                    <p>Contact us: <a href="mailto:ttech4kids@gmail.com">ttech4kids@gmail.com</a></p>
+                </div>
+                <div class="social-links">
+                    <a href="https://x.com/Tech4kidz26" target="_blank">X (formerly Twitter): @Tech4kidz26</a> |
+                    <a href="https://facebook.com" target="_blank">Facebook</a> |
+                    <a href="https://instagram.com" target="_blank">Instagram</a>
+                </div>
+            </footer>
+
+            <script src="js/main.js"></script>
+        </body>
+
+        </html>
+
+        ```

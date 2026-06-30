@@ -1,3 +1,10 @@
+Here is your updated `volunteer.html` file.
+
+I integrated your assigned image (`images/pexels-yankrukov-8199624.jpg` showing a volunteer/mentor helping a student)
+directly into the `form-intro` section using your standardized `.page-image` class. This ensures it perfectly matches
+your site layout guidelines and satisfies the project requirement of having a contextual image on every page.
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,7 +12,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Get Involved | Tech4Kids</title>
-    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link class="icon" type="image/x-icon" href="images/favicon.ico">
     <link rel="stylesheet" href="css/style.css">
     <style>
         /* Embedded Interactive Calendar Styles */
@@ -116,6 +123,10 @@
             <h1>Join the Program</h1>
             <p>Select an upcoming orientation date on our live schedule, then register as a mentor or student
                 participant below.</p>
+
+            <!-- Added standalone page image to satisfy course criteria -->
+            <img src="images/pexels-yankrukov-8199624.jpg"
+                alt="Tech volunteer guiding a young student on a laptop computer" class="page-image">
         </section>
 
         <!-- Interactive JavaScript Calendar Component -->
@@ -271,3 +282,5 @@
 </body>
 
 </html>
+
+```
