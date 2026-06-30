@@ -5,13 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FAQs | Tech4Kids</title>
-    <!-- Favicon Requirement -->
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-    <!-- Link to master responsive stylesheet -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+
+    <a href="#main" class="skip-link"
+        style="position: absolute; left: -10000px; top: auto; width: 1px; height: 1px; overflow: hidden;">Skip to Main
+        Content</a>
 
     <header>
         <div class="header-container">
@@ -40,21 +42,23 @@
         </div>
     </header>
 
-    <main>
+    <main id="main">
         <section class="faq-intro" style="text-align: center; margin-bottom: 2rem;">
             <h1>Frequently Asked Questions</h1>
             <p>Find quick answers regarding equipment specifications, safety protocols in our soldering labs, and device
                 data clearing measures.</p>
 
-            <!-- Contextual image satisfying standalone page criteria -->
             <img src="images/pexels-august-de-richelieu-4260484.jpg"
-                alt="A young student typing on a laptop during an independent coding module" class="page-image">
+                alt="A young student typing on a laptop during an independent coding module" class="page-image"
+                loading="lazy" decoding="async" width="550" height="367"
+                style="max-width: 80px; margin: 1.5rem auto; display: block;">
         </section>
 
         <hr>
 
-        <section class="faq-content" style="max-width: 800px; margin: 2rem auto; padding: 0 1rem;">
-            <div style="margin-bottom: 2rem;">
+        <section class="faq-section" style="max-width: 800px; margin: 2rem auto; padding: 0 1rem;">
+
+            <div class="faq-item" style="margin-bottom: 2rem; padding-bottom: 1rem; border-bottom: 1px solid #e2e8f0;">
                 <h3 style="color: var(--primary-color); margin-bottom: 0.5rem;">❓ Do you safely erase my personal files
                     before reusing devices?</h3>
                 <p>Absolutely. Every donated laptop, tablet, and phone goes through a secure formatting and
@@ -62,7 +66,7 @@
                     before students interact with the physical modules.</p>
             </div>
 
-            <div style="margin-bottom: 2rem;">
+            <div class="faq-item" style="margin-bottom: 2rem; padding-bottom: 1rem; border-bottom: 1px solid #e2e8f0;">
                 <h3 style="color: var(--primary-color); margin-bottom: 0.5rem;">❓ What age brackets are permitted in the
                     engineering and soldering clinics?</h3>
                 <p>Our core hardware configuration and block programming paths support children ages 8 to 15. Advanced
@@ -70,7 +74,7 @@
                     with strict parental verification parameters.</p>
             </div>
 
-            <div style="margin-bottom: 2rem;">
+            <div class="faq-item" style="margin-bottom: 2rem; padding-bottom: 1rem; border-bottom: 1px solid #e2e8f0;">
                 <h3 style="color: var(--primary-color); margin-bottom: 0.5rem;">❓ Is there a pickup service available
                     for corporate hardware items?</h3>
                 <p>Yes! For local corporate partners or tech companies donating surplus technology bundles (10 or more
@@ -78,12 +82,13 @@
                     Contact page to set your layout requirements.</p>
             </div>
 
-            <div style="margin-bottom: 2rem;">
+            <div class="faq-item" style="margin-bottom: 2rem; padding-bottom: 1rem; border-bottom: 1px solid #e2e8f0;">
                 <h3 style="color: var(--primary-color); margin-bottom: 0.5rem;">❓ Can my child join a learning lab if
                     they have zero prior tech experience?</h3>
                 <p>Definitely. Tech4Kids is purpose-built to cater to absolute beginners. We design our visual syntax,
                     puzzle-based parameters, and hardware breakdown labs to scale sequentially from the ground up.</p>
             </div>
+
         </section>
     </main>
 

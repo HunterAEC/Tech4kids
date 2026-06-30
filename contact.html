@@ -15,6 +15,10 @@
 
 <body>
 
+    <a href="#main" class="skip-link"
+        style="position: absolute; left: -10000px; top: auto; width: 1px; height: 1px; overflow: hidden;">Skip to
+        Main Content</a>
+
     <header>
         <div class="header-container">
             <div class="logo">
@@ -42,18 +46,22 @@
         </div>
     </header>
 
-    <main class="container my-5">
+    <main class="container my-5" id="main">
 
         <section class="row align-items-center mb-5">
             <div class="col-lg-6">
                 <h1>Get in Touch</h1>
-                <p>Have questions about device drop-offs, scheduling a school workshop, or joining our hardware training
-                    labs? Reach out directly using the coordinates below or browse through our modern facility gallery.
+                <p>Have questions about device drop-offs, scheduling a school workshop, or joining our hardware
+                    training
+                    labs? Reach out directly using the coordinates below or browse through our modern facility
+                    gallery.
                 </p>
 
+                <!-- Micro-optimized image constrained to less than 10% footprint layout -->
                 <img src="images/pexels-ketut-subiyanto-4623542.jpg"
                     alt="A focused student configuring display options at an engineering station"
-                    class="page-image my-4" style="max-width: 275px;">
+                    class="page-image my-3" loading="lazy" decoding="async" width="550" height="367"
+                    style="max-width: 65px; display: block;">
 
                 <div class="mt-4">
                     <p><strong>General Inquiries:</strong> <a
@@ -78,7 +86,8 @@
                     <div class="carousel-inner">
                         <div class="carousel-item active" data-bs-interval="4000">
                             <img src="images/pexels-delot-18471568.jpg" class="d-block w-100 object-fit-cover"
-                                style="height: 400px;" alt="Tech4Kids electrical benches and diagnostic monitors">
+                                style="height: 400px;" alt="Tech4Kids electrical benches and diagnostic monitors"
+                                loading="lazy">
                             <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded-2 p-2">
                                 <h5>Hardware Testing Lab</h5>
                                 <p>Where students measure parameters and test recycled components.</p>
@@ -88,16 +97,18 @@
                         <div class="carousel-item" data-bs-interval="4000">
                             <img src="images/pexels-polina-zimmerman-3747473.jpg" class="d-block w-100 object-fit-cover"
                                 style="height: 400px;"
-                                alt="Rows of learning computers inside our brightly lit classroom">
+                                alt="Rows of learning computers inside our brightly lit classroom" loading="lazy">
                             <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded-2 p-2">
                                 <h5>Main Computer Classroom</h5>
-                                <p>Our collaborative space for exploring software environments and safe practices.</p>
+                                <p>Our collaborative space for exploring software environments and safe practices.
+                                </p>
                             </div>
                         </div>
 
                         <div class="carousel-item" data-bs-interval="4000">
                             <img src="images/pexels-ketut-subiyanto-4623542.jpg" class="d-block w-100 object-fit-cover"
-                                style="height: 400px;" alt="A student focused intensely on a large display screen">
+                                style="height: 400px;" alt="A student focused intensely on a large display screen"
+                                loading="lazy">
                             <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded-2 p-2">
                                 <h5>Interactive Code Station</h5>
                                 <p>Building layouts, setting preferences, and configuring modern applications.</p>
@@ -121,31 +132,32 @@
 
         <hr>
 
-        <section class="contact-section form-section max-width-700 mx-auto">
+        <section class="contact-section form-section max-width-700 mx-auto" style="max-width: 700px;">
             <h2 class="text-center mb-4">Send a Message</h2>
             <form action="#" method="POST">
-                <fieldset>
-                    <legend>Contact Information</legend>
-                    <p>
-                        <label for="fname">Full Name:</label>
-                        <input type="text" id="fname" name="fullname" required>
-                    </p>
-                    <p>
-                        <label for="useremail">Email Address:</label>
-                        <input type="email" id="useremail" name="email" required>
-                    </p>
-                    <p>
-                        <label for="subject">Subject:</label>
-                        <input type="text" id="subject" name="subject" required>
-                    </p>
-                    <p>
-                        <label for="comments">Message Content:</label>
-                        <textarea id="comments" name="message" rows="5" required></textarea>
-                    </p>
+                <fieldset class="border p-4 rounded-3">
+                    <legend class="float-none w-auto px-2 fs-5 fw-bold">Contact Information</legend>
+                    <div class="mb-3">
+                        <label for="fname" class="form-label">Full Name:</label>
+                        <input type="text" id="fname" class="form-control" name="fullname" autocomplete="name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="useremail" class="form-label">Email Address:</label>
+                        <input type="email" id="useremail" class="form-control" name="email" autocomplete="email"
+                            required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="subject" class="form-label">Subject:</label>
+                        <input type="text" id="subject" class="form-control" name="subject" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="comments" class="form-label">Message Content:</label>
+                        <textarea id="comments" class="form-control" name="message" rows="5" required></textarea>
+                    </div>
                 </fieldset>
 
-                <div class="form-submit">
-                    <button type="submit" class="cta-button">Send Message</button>
+                <div class="form-submit text-center mt-4">
+                    <button type="submit" class="cta-button btn btn-primary px-4 py-2">Send Message</button>
                 </div>
             </form>
         </section>
@@ -172,3 +184,5 @@
 </body>
 
 </html>
+
+```

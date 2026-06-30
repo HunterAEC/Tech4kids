@@ -11,6 +11,10 @@
 
 <body>
 
+    <a href="#main" class="skip-link"
+        style="position: absolute; left: -10000px; top: auto; width: 1px; height: 1px; overflow: hidden;">Skip to Main
+        Content</a>
+
     <header>
         <div class="header-container">
             <div class="logo">
@@ -38,82 +42,65 @@
         </div>
     </header>
 
-    <main>
-        <section class="donations-pitch" style="text-align: center;">
-            <h1>Donate Your Electronics</h1>
-            <p>Tech4Kids wants to put your old tech to use! The tech you don’t need can help a child learn. We
-                are
-                always looking for old computers, tablets, and phones to spark hands-on curiosity in our
-                workshops.</p>
+    <main id="main">
+        <section class="donation-intro" style="text-align: center; margin-bottom: 2rem;">
+            <h1>Hardware Technology Donations</h1>
+            <p>Give your retired hardware systems a meaningful second life. We transform surplus equipment into
+                high-impact diagnostic labs for students.</p>
 
             <img src="images/pexels-tu-n-nguy-n-van-2158117329-35571660.jpg"
-                alt="A classroom of young students learning on modern desktop computer layouts" class="page-image">
+                alt="A classroom of young students learning on modern desktop computer layouts during a hands-on workshop"
+                class="page-image" loading="lazy" decoding="async" width="550" height="367"
+                style="max-width: 245px; margin: 1.5rem auto;">
         </section>
 
         <hr>
 
-        <section class="table-section">
-            <h2>Acceptable Donation Priority Guide</h2>
-            <p>Review our needed item specifications below. Devices in working order directly power classroom
-                software
-                and cybersecurity programs, while non-working hardware is highly valued for hardware extraction
-                and
-                building practice.</p>
+        <section class="donation-guidelines" style="max-width: 900px; margin: 0 auto;">
+            <h2 style="text-align: center; margin-bottom: 1.5rem; color: var(--primary-color);">Accepted Equipment
+                Guidelines</h2>
+            <p style="margin-bottom: 2rem; text-align: center;">To guarantee safety configurations inside our teaching
+                modules, please verify that your items match the hardware performance parameters detailed below:</p>
 
             <div class="table-responsive-container">
                 <table>
                     <thead>
                         <tr>
                             <th>Device Category</th>
-                            <th>Operational Status</th>
-                            <th>Priority Tier</th>
-                            <th>Classroom Use Case</th>
+                            <th>Minimum Operational Requirements</th>
+                            <th>Status Condition Allowed</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td><strong>Old Laptops</strong></td>
-                            <td>Working Order</td>
-                            <td>⭐⭐⭐⭐⭐ Top Priority</td>
-                            <td>Primary devices used by kids for programming, hardware interfacing, and basic
-                                cybersecurity
-                                training labs.</td>
+                            <td><strong>Laptops / Desktops</strong></td>
+                            <td>Intel Core i3 or equivalent, 4GB RAM minimum capacity</td>
+                            <td>Working condition; minor cosmetics acceptable</td>
                         </tr>
                         <tr>
-                            <td><strong>Old Tablets</strong></td>
-                            <td>Working Order</td>
-                            <td>⭐⭐⭐⭐ High Priority</td>
-                            <td>Utilized for responsive web mobile layout testing, visual block coding setups,
-                                and
-                                interactive digital educational modules.</td>
+                            <td><strong>Tablets & Mobile</strong></td>
+                            <td>iOS 12+ or Android 9.0+ processing architectures</td>
+                            <td>Functional screens; battery holds basic charge stability</td>
                         </tr>
                         <tr>
-                            <td><strong>Old Phones</strong></td>
-                            <td>Working Order</td>
-                            <td>⭐⭐⭐⭐ High Priority</td>
-                            <td>Used by advanced groups for testing student-made apps, examining configurations,
-                                and
-                                verifying device deployment.</td>
-                        </tr>
-
-                        <tr>
-                            <td>Old Laptops</td>
-                            <td>Non-Working / Broken</td>
-                            <td>⭐⭐ Medium Priority</td>
-                            <td>Perfect for computer assembly workshops, allowing kids to learn PC construction
-                                by mapping
-                                components like CPUs, RAM, and drives.</td>
+                            <td><strong>Components & Parts</strong></td>
+                            <td>Solid State Drives (SSD), DDR4 memory channels, basic power units</td>
+                            <td>Unused or fully tested working modules</td>
                         </tr>
                         <tr>
-                            <td>Old Tablets / Phones</td>
-                            <td>Non-Working / Broken</td>
-                            <td>⭐ Low Priority</td>
-                            <td>Used safely in hardware breakdown labs to teach physical components, parts
-                                harvesting, and
-                                entry-level soldering clinics.</td>
+                            <td><strong>Peripherals</strong></td>
+                            <td>USB Keyboards, optical mice, functional 1080p screen displays</td>
+                            <td>Clean layouts; cable components undamaged</td>
                         </tr>
                     </tbody>
                 </table>
+            </div>
+
+            <div style="text-align: center; margin-top: 3rem;">
+                <p style="margin-bottom: 1.5rem; font-size: 1.1rem;">Ready to schedule a device drop-off or corporate
+                    technology recycling collection?</p>
+                <a href="contact.html" style="text-decoration: none;"><button class="cta-button">Coordinate
+                        Drop-off</button></a>
             </div>
         </section>
     </main>
@@ -134,5 +121,3 @@
 </body>
 
 </html>
-
-```

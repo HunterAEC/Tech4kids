@@ -4,12 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Learning Resources | Tech4Kids</title>
+    <title>FAQs | Tech4Kids</title>
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+
+    <a href="#main" class="skip-link"
+        style="position: absolute; left: -10000px; top: auto; width: 1px; height: 1px; overflow: hidden;">Skip to Main
+        Content</a>
 
     <header>
         <div class="header-container">
@@ -28,91 +32,56 @@
             <nav class="nav-menu" id="nav-menu">
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="learning.html" class="active">Learning Resources</a></li>
+                    <li><a href="learning.html">Learning Resources</a></li>
                     <li><a href="donations.html">Donations</a></li>
                     <li><a href="volunteer.html">Get Involved</a></li>
-                    <li><a href="faqs.html">FAQs</a></li>
+                    <li><a href="faqs.html" class="active">FAQs</a></li>
                     <li><a href="contact.html">Contact Us</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <main>
-        <section class="resources-intro" style="text-align: center;">
-            <h1>Hardware &amp; Software Learning Labs</h1>
-            <p>Dive deep into our interactive video masterclasses. Browse through our courses covering beginner-friendly
-                software architecture, block coding interfaces, and safe physical hardware construction setups.</p>
+    <main id="main">
+        <section class="faq-intro" style="text-align: center; margin-bottom: 2rem;">
+            <h1>Frequently Asked Questions</h1>
+            <p>Have questions about our technology learning programs, hardware requirements, or how to get involved?
+                Find quick answers below.</p>
 
+            <!-- Image constrained to less than 20% width -->
             <img src="images/pexels-delot-18471530.jpg"
-                alt="A tech hardware development and circuit assembly workstation layout" class="page-image">
+                alt="A tech hardware development and circuit assembly workstation layout" class="page-image"
+                loading="lazy" decoding="async" width="550" height="367"
+                style="max-width: 150px; margin: 1rem auto; display: block;">
         </section>
 
         <hr>
 
-        <section class="video-section" style="text-align: center; margin: 2.5rem 0;">
-            <h2>Introduction to Block Programming for Kids</h2>
-            <div class="video-wrapper"
-                style="max-width: 800px; margin: 1.5rem auto; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden; position: relative; padding-top: 56.25%;">
-                <iframe src="https://www.youtube.com/embed/HGvv7aMyC-s?si=M2CoBi3SvZGue7iA"
-                    title="PROGRAMMING for kids 👦 Block Programming 💻 Part 2"
-                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <!-- Clean, accessible, and centered FAQ display container -->
+        <section class="faq-section" style="max-width: 800px; margin: 2.5rem auto; padding: 0 1rem;">
+
+            <div class="faq-item" style="margin-bottom: 2rem; padding-bottom: 1.5rem; border-bottom: 1px solid #eee;">
+                <h3 style="color: var(--primary-color); margin-bottom: 0.5rem;">What age group are the Tech4Kids modules
+                    designed for?</h3>
+                <p>Our programs are structured primarily for students aged 8 to 15, with entry-level tracks for block
+                    programming and advanced paths for physical hardware builds.</p>
             </div>
-            <p style="color: var(--accent-color); font-size: 0.9rem; margin-top: 0.5rem;">Discover how colored visual
-                puzzle blocks fit together cleanly to execute instructions, character motions, and programmatic
-                condition loops.</p>
 
-            <div style="margin-top: 1.5rem; text-align: left; max-width: 800px; margin-left: auto; margin-right: auto;">
-                <p style="margin-bottom: 0.75rem;">🧩 <strong>Visual Syntax:</strong> Learning how commands fit together
-                    cleanly like puzzle segments on an instructions dashboard [00:01:00].</p>
-                <p style="margin-bottom: 0.75rem;">🔵 <strong>Motion Blocks:</strong> Configuring coordinates for blue
-                    motion parameters to control steps, jumps, or rotational adjustments [00:02:01].</p>
-                <p style="margin-bottom: 0.75rem;">🟠 <strong>Control Blocks &amp; Conditions:</strong> Setting orange
-                    control parameters to manage repetitions and logic triggers, like stopping on a red light marker
-                    [00:02:20].</p>
+            <div class="faq-item" style="margin-bottom: 2rem; padding-bottom: 1.5rem; border-bottom: 1px solid #eee;">
+                <h3 style="color: var(--primary-color); margin-bottom: 0.5rem;">Are there any costs or fees associated
+                    with the training paths?</h3>
+                <p>No, all our online learning interactive resources, laboratory configurations, and video classes are
+                    completely free to public students worldwide.</p>
             </div>
-        </section>
 
-        <hr>
-
-        <section class="video-section" style="text-align: center; margin: 2.5rem 0;">
-            <h2>The Easiest PC Building Guide Ever</h2>
-            <div class="video-wrapper"
-                style="max-width: 800px; margin: 1.5rem auto; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden; position: relative; padding-top: 56.25%;">
-                <iframe src="https://www.youtube.com/embed/4AbyOqe7ggc?si=XG8ekCzs6xlir7HD"
-                    title="The Easiest PC Building Guide Ever"
-                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <!-- Your requested structure integrated cleanly into production -->
+            <div class="faq-item" style="margin-bottom: 2rem; padding-bottom: 1.5rem; border-bottom: 1px solid #eee;">
+                <h3 style="color: var(--primary-color); margin-bottom: 0.5rem;">How can I track student lab completion
+                    checkpoints?</h3>
+                <p>Each video resource includes timestamp guides so students can systematically pause, evaluate their
+                    configuration milestones, and debug physical parts alongside our instructions.</p>
             </div>
-            <p style="color: var(--accent-color); font-size: 0.9rem; margin-top: 0.5rem;">Our full formula to safely
-                assembling structural computing hardware units entirely from absolute scratch.</p>
 
-            <div style="margin-top: 1.5rem; text-align: left; max-width: 800px; margin-left: auto; margin-right: auto;">
-                <p style="margin-bottom: 0.75rem;">🛠️ <strong>Tool Preparation:</strong> Organizing your screwdrivers,
-                    zip ties, and storage units safely prior to starting assembly [00:01:05].</p>
-                <p style="margin-bottom: 0.75rem;">🧠 <strong>CPU Integration:</strong> Step-by-step instructions for
-                    placing processing chips securely inside motherboards without bending contact pins [00:03:35].</p>
-                <p style="margin-bottom: 0.75rem;">⚡ <strong>Dual-Channel RAM Pathing:</strong> Locking down computing
-                    memory modules securely inside second and fourth slot slots [00:06:57].</p>
-            </div>
-        </section>
-
-        <hr>
-
-        <section class="additional-resources" style="text-align: center; margin: 2.5rem 0;">
-            <h2>Explore More Resources</h2>
-            <p>Ready to take your learning further? Check out these amazing platforms:</p>
-            <div style="margin-top: 1.5rem;">
-                <a href="https://www.w3schools.com/" target="_blank" rel="noopener"
-                    style="display: inline-block; margin: 0 15px; padding: 10px 20px; background-color: var(--accent-color, #4CAF50); color: white; text-decoration: none; border-radius: 5px; font-weight: bold;">Visit
-                    W3Schools</a>
-                <a href="https://scattervolt.com/" target="_blank" rel="noopener"
-                    style="display: inline-block; margin: 0 15px; padding: 10px 20px; background-color: var(--accent-color, #2196F3); color: white; text-decoration: none; border-radius: 5px; font-weight: bold;">Visit
-                    ScatterVolt</a>
-            </div>
         </section>
     </main>
 
@@ -130,11 +99,5 @@
 
     <script src="js/main.js"></script>
 </body>
-<img src="images/pexels-gustavo-fring-5621952.jpg"
-    alt="Instructor mentoring students inside an interactive computer lab workspace" class="home-image" loading="lazy"
-    width="650" height="433">
-
-<img src="images/pexels-delot-18471530.jpg" alt="A tech hardware development and circuit assembly workstation layout"
-    class="page-image" loading="lazy" width="550" height="367">
 
 </html>

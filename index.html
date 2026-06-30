@@ -4,12 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home | Tech4Kids Organization</title>
+    <title>Home | Tech4Kids</title>
+    <meta name="description"
+        content="Tech4Kids teaches children programming, cybersecurity, and computer hardware through hands-on learning.">
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     <link rel="stylesheet" href="css/style.css">
+    <meta name="description"
+        content="Tech4Kids teaches children programming, cybersecurity, and computer hardware through hands-on learning.">
 </head>
 
 <body>
+
+    <a href="#main" class="skip-link"
+        style="position: absolute; left: -10000px; top: auto; width: 1px; height: 1px; overflow: hidden;">Skip to Main
+        Content</a>
 
     <header>
         <div class="header-container">
@@ -38,65 +46,23 @@
         </div>
     </header>
 
-    <main>
-        <section class="intro-section" style="text-align: center; margin-bottom: 3rem;">
-            <h1 style="font-size: 2.5rem; margin-bottom: 1rem;">Empowering the Next Generation of Technologists</h1>
-            <p style="font-size: 1.15rem; color: var(--accent-color); max-width: 800px; margin: 0 auto 1.5rem auto;">
-                Tech4Kids was created with a dream of helping kids learn tech from a young age, creating
-                learning experiences that go far beyond just standard programming.
-            </p>
+    <main id="main">
+        <section class="section-center"
+            style="text-align: center; max-width: 900px; margin: 0 auto; padding: 2rem 1rem;">
+            <h1>Empowering the Next Generation of Technologists</h1>
+            <p>Tech4Kids helps young people develop real-world technology skills through hands-on labs.</p>
 
-            <img src="images/pexels-gustavo-fring-5621952.jpg"
-                alt="Instructor mentoring students inside an interactive computer lab workspace" class="home-image">
-        </section>
+            <div class="image-gallery-row"
+                style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem;">
+                <img src="images/pexels-gustavo-fring-5621952.jpg"
+                    alt="An instructor guiding young students during an interactive computer lab coding module"
+                    class="home-image" loading="lazy" decoding="async" width="650" height="433"
+                    style="max-width: 250px; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); object-fit: cover;">
 
-        <hr>
-
-        <section class="philosophy-section" style="margin: 3rem 0;">
-            <h2 style="text-align: center; margin-bottom: 2rem;">Our Core Focus Areas</h2>
-            <div style="display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center;">
-
-                <div
-                    style="flex: 1; min-width: 280px; max-width: 350px; background: var(--white); padding: 1.5rem; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
-                    <h3 style="color: var(--primary-color); margin-bottom: 0.5rem;">🛠️ Hardware Assembly</h3>
-                    <p>We provide safe, hands-on environments where children learn to assemble actual physical
-                        computers, understand circuits, and recognize essential motherboard processors.</p>
-                </div>
-
-                <div
-                    style="flex: 1; min-width: 280px; max-width: 350px; background: var(--white); padding: 1.5rem; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
-                    <h3 style="color: var(--primary-color); margin-bottom: 0.5rem;">🔥 Engineering &amp; Soldering</h3>
-                    <p>Moving past standard screens, our labs guide senior students through basic soldering safety,
-                        custom component routing, and minor engineering concepts.</p>
-                </div>
-
-                <div
-                    style="flex: 1; min-width: 280px; max-width: 350px; background: var(--white); padding: 1.5rem; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
-                    <h3 style="color: var(--primary-color); margin-bottom: 0.5rem;">🛡️ Basic Cybersecurity</h3>
-                    <p>We believe it all starts with secure digital education. Young minds practice navigating networks,
-                        setting strong security parameters, and surfing safely.</p>
-                </div>
-
-            </div>
-        </section>
-
-        <hr>
-
-        <section class="cta-banner-section"
-            style="background-color: #F1F5F9; border-left: 5px solid var(--primary-color); padding: 2rem; border-radius: 4px; margin-top: 2rem;">
-            <h2 style="margin-bottom: 0.75rem;">Put Your Old Technology To Better Use</h2>
-            <p style="margin-bottom: 1.5rem; max-width: 900px;">
-                The hardware you don't need can help a child learn! Tech4Kids wants to salvage your old tech and turn it
-                into real-world educational components. We are actively collecting computers, tablets, and mobile phones
-                to fuel our classrooms.
-            </p>
-            <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
-                <a href="donations.html" class="cta-button"
-                    style="text-decoration: none; display: inline-block; text-align: center;">Donate Surplus
-                    Equipment</a>
-                <a href="learning.html" class="cta-button"
-                    style="background-color: var(--cta-color); text-decoration: none; display: inline-block; text-align: center;">Explore
-                    Learning Labs</a>
+                <img src="images/pexels-delot-18471530.jpg"
+                    alt="A technical engineering workstation displaying electronic components and testing arrays"
+                    class="home-image" loading="lazy" decoding="async" width="550" height="367"
+                    style="max-width: 250px; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); object-fit: cover;">
             </div>
         </section>
     </main>
@@ -115,11 +81,5 @@
 
     <script src="js/main.js"></script>
 </body>
-<img src="images/pexels-gustavo-fring-5621952.jpg"
-    alt="Instructor mentoring students inside an interactive computer lab workspace" class="home-image" loading="lazy"
-    width="650" height="433">
-
-<img src="images/pexels-delot-18471530.jpg" alt="A tech hardware development and circuit assembly workstation layout"
-    class="page-image" loading="lazy" width="550" height="367">
 
 </html>

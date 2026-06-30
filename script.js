@@ -1,26 +1,15 @@
-/**
- * Tech4Kids - Master Interactive Script (2026)
- * Handles Global Navigation, Form Actions, and Interactive UX Component States
- */
-
 document.addEventListener("DOMContentLoaded", () => {
-    // --- 1. MOBILE MENU NAVIGATION (HAMBURGER TOGGLE) ---
     const hamburgerToggle = document.getElementById("hamburger-toggle");
     const navMenu = document.getElementById("nav-menu");
 
     if (hamburgerToggle && navMenu) {
         hamburgerToggle.addEventListener("click", () => {
             const isExpanded = hamburgerToggle.getAttribute("aria-expanded") === "true";
-
-            // Toggle accessibility states
             hamburgerToggle.setAttribute("aria-expanded", !isExpanded);
-
-            // Toggle active classes for CSS animations
             hamburgerToggle.classList.toggle("active");
             navMenu.classList.toggle("active");
         });
 
-        // Close mobile menu if a user clicks outside of it
         document.addEventListener("click", (event) => {
             if (!navMenu.contains(event.target) && !hamburgerToggle.contains(event.target)) {
                 hamburgerToggle.setAttribute("aria-expanded", "false");
@@ -30,8 +19,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // --- 2. DYNAMIC NAV LINK HIGHLIGHTING ---
-    // Safely updates active menu highlighting based on current window file structures
     const currentPath = window.location.pathname.split("/").pop();
     const navLinks = document.querySelectorAll(".nav-menu ul li a");
 
@@ -39,24 +26,18 @@ document.addEventListener("DOMContentLoaded", () => {
         const linkHref = link.getAttribute("href");
         if (currentPath === linkHref || (currentPath === "" && linkHref === "index.html")) {
             link.classList.add("active");
-        } else {
-            // Remove hardcoded active classes from other pages if they clash
-            if (currentPath !== "") {
-                link.classList.remove("active");
-            }
+        } else if (currentPath !== "") {
+            link.classList.remove("active");
         }
     });
 
-    // --- 3. INTERACTIVE FAQ ACCORDION TRANSITIONS ---
-    // If you add a wrapping container with a class to your FAQs, this handles smooth click expanding
-    const faqContainers = document.querySelectorAll(".faq-content div");
+    const faqContainers = document.querySelectorAll(".faq-section .faq-item");
 
     faqContainers.forEach(container => {
         const questionElement = container.querySelector("h3");
         const answerElement = container.querySelector("p");
 
         if (questionElement && answerElement) {
-            // Set up initial inline styles for transition performance
             questionElement.style.cursor = "pointer";
             questionElement.style.userSelect = "none";
             answerElement.style.display = "none";
@@ -66,23 +47,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
             questionElement.addEventListener("click", () => {
                 const isHidden = answerElement.style.display === "none";
-
-                // Toggle display parameters smoothly
                 answerElement.style.display = isHidden ? "block" : "none";
                 questionElement.style.opacity = isHidden ? "0.8" : "1";
             });
         }
     });
 
-    // --- 4. VOLUNTEER & CONTACT FORM CAPTURE VALIDATION ---
     const registrationForm = document.querySelector(".form-section form, .contact-section form");
 
     if (registrationForm) {
         registrationForm.addEventListener("submit", (e) => {
-            // Prevent the default browser page crash/refresh behavior
             e.preventDefault();
 
-            // Gather standard input field contexts
             const userEmail = registrationForm.querySelector("input[type='email']");
             const firstName = registrationForm.querySelector("input[id='fname']");
 
@@ -90,7 +66,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 const nameDisplay = firstName ? firstName.value : "there";
                 const formParent = registrationForm.parentElement;
 
-                // Smoothly swap form visual parameters with success notification layouts
                 formParent.innerHTML = `
                     <div class="success-message" style="
                         text-align: center; 
