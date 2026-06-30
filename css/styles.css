@@ -1,54 +1,296 @@
-/* ==========================================================================
-   Image Sizing & Layout (Home is set as the largest)
-   ========================================================================== */
-
-/* Standard Inner Page Images (Contact, Learning, FAQs, etc.) */
-.page-image {
-    max-width: 40%;
-    height: auto;
-    border-radius: 8px;
-    margin: 1.5em auto;
-    display: block;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+:root {
+    --primary-color: #7026b8;
+    --accent-color: #4a5568;
+    --cta-color: #ff6b6b;
+    --bg-light: #f8fafc;
+    --white: #ffffff;
+    --dark: #1a202c;
+    --font-primary: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Main Home Page Image (Sized larger per your requirement) */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-primary);
+    background-color: var(--bg-light);
+    color: var(--dark);
+    line-height: 1.6;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: #e2e8f0;
+    margin: 2.5rem 0;
+}
+
+.page-image,
 .home-image {
-    max-width: 70%;
+    display: block;
+    width: 100%;
     height: auto;
     border-radius: 8px;
-    margin: 2em auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+    decoding: async;
+}
+
+.page-image {
+    max-width: 550px;
+    margin: 1.5rem auto;
+}
+
+.home-image {
+    max-width: 650px;
+    margin: 2rem auto 0 auto;
+}
+
+header {
+    background-color: var(--white);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.nav-menu ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: var(--accent-color);
+    font-weight: 500;
+    transition: color 0.2s ease-index;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 2rem;
+    height: 1.5rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.hamburger .bar {
+    width: 2rem;
+    height: 0.25rem;
+    background-color: var(--primary-color);
+    border-radius: 10px;
+    transition: all 0.3s linear;
+}
+
+.cta-button {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.cta-button:hover {
+    transform: translateY(-1px);
+    opacity: 0.9;
+}
+
+.form-section form {
+    max-width: 700px;
+    margin: 2rem auto;
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+fieldset {
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+legend {
+    font-weight: bold;
+    color: var(--primary-color);
+    padding: 0 0.5rem;
+}
+
+.form-section p {
+    margin-bottom: 1.25rem;
+}
+
+.form-section label {
     display: block;
-    box-shadow: 0 6px 12px -2px rgba(0, 0, 0, 0.15);
+    margin-bottom: 0.4rem;
+    font-weight: 500;
 }
 
-/* ==========================================================================
-   MEDIA VIEWS RESPONSIVE ADJUSTMENTS
-   ========================================================================== */
-
-/* 1. Mobile Layout Viewport (up to 48em / 768px) */
-@media (max-width: 48em) {
-    /* ... keep your other mobile styles here ... */
-
-    .page-image {
-        max-width: 90%;
-    }
-
-    .home-image {
-        max-width: 100%;
-        /* Spans full width on mobile screens */
-    }
+.form-section input[type="text"],
+.form-section input[type="email"],
+.form-section input[type="tel"],
+.form-section input[type="date"],
+.form-section input[type="number"],
+.form-section select,
+.form-section textarea {
+    width: 100%;
+    padding: 0.6rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 4px;
+    font-family: var(--font-primary);
 }
 
-/* 2. Tablet Layout Viewport (48.06em to 64em / ~769px to 1024px) */
-@media (min-width: 48.06em) and (max-width: 64em) {
-    /* ... keep your other tablet styles here ... */
+.form-section input[type="checkbox"] {
+    width: auto;
+    margin-top: 0.5rem;
+    transform: scale(1.2);
+}
 
-    .page-image {
-        max-width: 65%;
+.form-submit {
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+.table-responsive-container {
+    width: 100%;
+    overflow-x: auto;
+    margin: 1.5rem 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--white);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+}
+
+th,
+td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #edf2f7;
+}
+
+th {
+    background-color: var(--primary-color);
+    color: var(--white);
+    font-weight: 600;
+}
+
+tr:hover {
+    background-color: #f8fafc;
+}
+
+footer {
+    background-color: var(--dark);
+    color: #a0aec0;
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: 4rem;
+    font-size: 0.9rem;
+}
+
+footer p {
+    margin-bottom: 0.5rem;
+}
+
+footer a {
+    color: var(--white);
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: var(--cta-color);
+}
+
+.social-links {
+    margin-top: 1rem;
+    font-size: 0.85rem;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
     }
 
-    .home-image {
-        max-width: 85%;
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--white);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 1rem 0;
+    }
+
+    .nav-menu.active {
+        display: block;
+    }
+
+    .nav-menu ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .philosophy-section div {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
     }
 }
