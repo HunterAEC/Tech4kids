@@ -1,8 +1,3 @@
-Here is your fully updated `index.html` file. The carousel has been expanded to include your two new micro-fabrication
-and hardware processor images alongside the existing ones, complete with accurate accessibility `alt` descriptions to
-maximize your assignment score.
-
-```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,9 +9,177 @@ maximize your assignment score.
         content="Tech4Kids teaches children programming, cybersecurity, and computer hardware through hands-on learning.">
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --accent-color: #475569;
+            --white: #ffffff;
+            --border-color: #e2e8f0;
+        }
+
+        body {
+            background-color: #f1f5f9;
+            color: #0f172a;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+
+        .hero-section {
+            margin-bottom: 5rem;
+            text-align: center;
+        }
+
+        .hero-text {
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-cta {
+            text-decoration: none;
+            padding: 1rem 2rem;
+            font-size: 1.125rem;
+            display: inline-block;
+        }
+
+        .carousel-container {
+            position: relative;
+            max-width: 450px;
+            margin: 3rem auto 0 auto;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        .carousel-slider {
+            display: flex;
+            transition: transform 0.4s ease-in-out;
+            width: 100%;
+        }
+
+        .carousel-slide {
+            min-width: 100%;
+            box-sizing: border-box;
+        }
+
+        .carousel-image {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            z-index: 10;
+        }
+
+        #prevBtn {
+            left: 8px;
+        }
+
+        #nextBtn {
+            right: 8px;
+        }
+
+        .features-section {
+            max-width: 900px;
+            margin: 0 auto 5rem;
+            background: var(--white);
+            padding: 3rem;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+
+        .features-header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+
+        .features-title {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #0f172a;
+            margin-bottom: 1rem;
+        }
+
+        .features-desc {
+            color: var(--accent-color);
+            font-size: 1.125rem;
+            line-height: 1.7;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+            font-size: 1.25rem;
+        }
+
+        .feature-card p {
+            font-size: 0.95rem;
+            color: #475569;
+        }
+
+        .partners-section {
+            text-align: center;
+            margin-bottom: 5rem;
+        }
+
+        .partners-list {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .design-help-section {
+            max-width: 600px;
+            margin: 0 auto 5rem auto;
+            padding: 2rem;
+            background-color: #f8fafc;
+            border: 1px dashed #cbd5e1;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .design-help-section h2 {
+            color: #0f172a;
+            margin-top: 0;
+            margin-bottom: 0.75rem;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .design-help-section p {
+            color: #475569;
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+    </style>
 </head>
 
-<body style="background-color: #f1f5f9; color: #0f172a;">
+<body>
 
     <a href="#main" class="skip-link">Skip to Main Content</a>
 
@@ -48,108 +211,85 @@ maximize your assignment score.
     </header>
 
     <main id="main">
-        <section class="section-center" style="margin-bottom: 5rem; text-align: center;">
+        <section class="hero-section">
             <h1>Where Curiosity Meets the Future.</h1>
-            <p style="margin-bottom: 2rem;">Empowering the next generation of creators, coders, and digital explorers
-                with fun, hands-on tech guides made just for kids.</p>
+            <p class="hero-text">Empowering the next generation of creators, coders, and digital explorers with fun,
+                hands-on tech guides made just for kids.</p>
 
-            <a href="learning.html" class="cta-button"
-                style="text-decoration: none; padding: 1rem 2rem; font-size: 1.125rem;">
+            <a href="learning.html" class="cta-button hero-cta">
                 Start Learning Today
             </a>
 
-            <div class="carousel-container"
-                style="position: relative; max-width: 450px; margin: 3rem auto 0 auto; overflow: hidden; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
-                <div class="carousel-slider" id="carouselSlider"
-                    style="display: flex; transition: transform 0.4s ease-in-out; width: 100%;">
-
-                    <div style="min-width: 100%; box-sizing: border-box;">
+            <div class="carousel-container">
+                <div class="carousel-slider" id="carouselSlider">
+                    <div class="carousel-slide">
                         <img src="images/pixels-gustavo-fring-5621952.jpg"
                             alt="An instructor guiding young students during an interactive computer lab coding module"
-                            loading="lazy" decoding="async" width="650" height="433"
-                            style="width: 100%; height: 280px; object-fit: cover; display: block;">
+                            loading="lazy" decoding="async" width="650" height="433" class="carousel-image">
                     </div>
-
-                    <div style="min-width: 100%; box-sizing: border-box;">
+                    <div class="carousel-slide">
                         <img src="images/Screenshot 2026-06-29 at 11.14.04 PM.jpg"
                             alt="Close up view of a microchip processor unit held up carefully by a clean lab glove"
-                            loading="lazy" decoding="async" width="650" height="433"
-                            style="width: 100%; height: 280px; object-fit: cover; display: block;">
+                            loading="lazy" decoding="async" width="650" height="433" class="carousel-image">
                     </div>
-
-                    <div style="min-width: 100%; box-sizing: border-box;">
+                    <div class="carousel-slide">
                         <img src="images/Screenshot 2026-06-29 at 11.14.37 PM.jpg"
                             alt="Automated production line precision machinery processing a silicon integrated wafer circle layout"
-                            loading="lazy" decoding="async" width="650" height="433"
-                            style="width: 100%; height: 280px; object-fit: cover; display: block;">
+                            loading="lazy" decoding="async" width="650" height="433" class="carousel-image">
                     </div>
-
-                    <div style="min-width: 100%; box-sizing: border-box;">
+                    <div class="carousel-slide">
                         <img src="images/pexels-delot-18471530.jpg"
                             alt="A technical engineering workstation displaying electronic components and testing arrays"
-                            loading="lazy" decoding="async" width="550" height="367"
-                            style="width: 100%; height: 280px; object-fit: cover; display: block;">
+                            loading="lazy" decoding="async" width="550" height="367" class="carousel-image">
                     </div>
                 </div>
 
-                <button id="prevBtn" aria-label="Previous Slide"
-                    style="position: absolute; top: 50%; left: 8px; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; border: none; padding: 8px 12px; border-radius: 4px; cursor: pointer; font-weight: bold; z-index: 10;">&#10094;</button>
-                <button id="nextBtn" aria-label="Next Slide"
-                    style="position: absolute; top: 50%; right: 8px; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; border: none; padding: 8px 12px; border-radius: 4px; cursor: pointer; font-weight: bold; z-index: 10;">&#10095;</button>
+                <button id="prevBtn" class="carousel-btn" aria-label="Previous Slide">&#10094;</button>
+                <button id="nextBtn" class="carousel-btn" aria-label="Next Slide">&#10095;</button>
             </div>
         </section>
 
-        <section
-            style="max-width: 900px; margin: 0 auto 5rem; background: var(--white); padding: 3rem; border-radius: 12px; border: 1px solid var(--border-color); box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);">
-            <div style="text-align: center; margin-bottom: 2.5rem;">
-                <h2 style="font-size: 2rem; font-weight: 800; color: #0f172a; margin-bottom: 1rem;">Why We Are Here</h2>
-                <p style="color: var(--accent-color); font-size: 1.125rem; line-height: 1.7;">Technology isn’t just
-                    about staring at screens—it’s about building what's next. At Tech4Kids, we break down complex topics
-                    like coding, robotics, and internet safety into bite-sized, playful adventures.</p>
+        <section class="features-section">
+            <div class="features-header">
+                <h2 class="features-title">Why We Are Here</h2>
+                <p class="features-desc">Technology isn’t just about staring at screens—it’s about building what's next.
+                    At Tech4Kids, we break down complex topics like coding, robotics, and internet safety into
+                    bite-sized, playful adventures.</p>
             </div>
 
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 2rem;">
-                <div>
-                    <h3 style="color: var(--primary-color); margin-bottom: 0.5rem; font-size: 1.25rem;">Kid-Friendly,
-                        Parent-Approved</h3>
-                    <p style="font-size: 0.95rem; color: #475569;">We write with zero jargon, focusing on creativity and
-                        problem-solving.</p>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>Kid-Friendly, Parent-Approved</h3>
+                    <p>We write with zero jargon, focusing on creativity and problem-solving.</p>
                 </div>
-                <div>
-                    <h3 style="color: var(--primary-color); margin-bottom: 0.5rem; font-size: 1.25rem;">Learn by Doing
-                    </h3>
-                    <p style="font-size: 0.95rem; color: #475569;">Our articles focus on projects you can actually
-                        build, from simple games to basic electronics.</p>
+                <div class="feature-card">
+                    <h3>Learn by Doing</h3>
+                    <p>Our articles focus on projects you can actually build, from simple games to basic electronics.
+                    </p>
                 </div>
-                <div>
-                    <h3 style="color: var(--primary-color); margin-bottom: 0.5rem; font-size: 1.25rem;">Safety First
-                    </h3>
-                    <p style="font-size: 0.95rem; color: #475569;">We prioritize digital literacy so kids learn how to
-                        navigate the online world securely.</p>
+                <div class="feature-card">
+                    <h3>Safety First</h3>
+                    <p>We prioritize digital literacy so kids learn how to navigate the online world securely.</p>
                 </div>
             </div>
         </section>
 
-        <section class="partners-section" style="text-align: center; margin-bottom: 5rem;">
+        <section class="partners-section">
             <h2 style="margin-bottom: 1.5rem;">Recommended Partners</h2>
-            <ul
-                style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 1rem; align-items: center;">
+            <ul class="partners-list">
                 <li><a href="https://www.smartphonefreechildhood.org/resource/the-good-tech-gift-guide" target="_blank"
-                        rel="noopener">The Good Tech Gift Guide</a></li>
-                <li><a href="https://www.target.com/c/kids-electronics/-/N-5xt9q" target="_blank" rel="noopener">Target
-                        Kids' Electronics</a></li>
+                        rel="noopener noreferrer">The Good Tech Gift Guide</a></li>
+                <li><a href="https://www.target.com/c/kids-electronics/-/N-5xt9q" target="_blank"
+                        rel="noopener noreferrer">Target Kids' Electronics</a></li>
                 <li><a href="https://www.amazon.com/cool-tech-gadgets-kids/s?k=cool+tech+gadgets+for+kids"
-                        target="_blank" rel="noopener">Amazon Cool Tech Gadgets for Kids</a></li>
+                        target="_blank" rel="noopener noreferrer">Amazon Cool Tech Gadgets for Kids</a></li>
             </ul>
         </section>
 
-        <section class="design-help-section"
-            style="max-width: 600px; margin: 0 auto 5rem auto; padding: 2rem; background-color: #f8fafc; border: 1px dashed #cbd5e1; border-radius: 8px; text-align: center;">
-            <h2 style="color: #0f172a; margin-top: 0; margin-bottom: 0.75rem; font-size: 1.5rem; font-weight: 700;">
-                Graphic design help needed!!!</h2>
-            <p style="color: #475569; margin-bottom: 1.5rem; font-size: 1rem; line-height: 1.5;">Are you a digital
-                artist, illustrator, or UI layout specialist? We are looking for creative volunteers to help make our
-                guides even more engaging for kids.</p>
+        <section class="design-help-section">
+            <h2>Graphic design help needed!!!</h2>
+            <p>Are you a digital artist, illustrator, or UI layout specialist? We are looking for creative volunteers to
+                help make our guides even more engaging for kids.</p>
             <a href="volunteer.html" class="cta-button"
                 style="text-decoration: none; padding: 0.75rem 1.5rem; font-size: 1rem; display: inline-block;">Join Our
                 Creative Team</a>
@@ -162,33 +302,38 @@ maximize your assignment score.
             <p>Contact us: <a href="mailto:ttech4kids@gmail.com">ttech4kids@gmail.com</a></p>
         </div>
         <div class="social-links">
-            <a href="https://x.com/Tech4kidz26" target="_blank">X (formerly Twitter): @Tech4kidz26</a> |
-            <a href="https://facebook.com" target="_blank">Facebook</a> |
-            <a href="https://instagram.com" target="_blank">Instagram</a>
+            <a href="https://x.com/Tech4kidz26" target="_blank" rel="noopener noreferrer">X: @Tech4kidz26</a> |
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a> |
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a>
         </div>
     </footer>
 
     <script src="js/main.js"></script>
 
     <script>
-        const slider = document.getElementById('carouselSlider');
-        const prevBtn = document.getElementById('prevBtn');
-        const nextBtn = document.getElementById('nextBtn');
-        let currentIndex = 0;
-        const totalSlides = slider.children.length;
+        document.addEventListener('DOMContentLoaded', () => {
+            const slider = document.getElementById('carouselSlider');
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
 
-        function updateSlider() {
-            slider.style.transform = `translateX(-${currentIndex * 100}%)`;
-        }
+            if (!slider || !prevBtn || !nextBtn) return;
 
-        nextBtn.addEventListener('click', () => {
-            currentIndex = (currentIndex + 1) % totalSlides;
-            updateSlider();
-        });
+            let currentIndex = 0;
+            const totalSlides = slider.children.length;
 
-        prevBtn.addEventListener('click', () => {
-            currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
-            updateSlider();
+            const updateSlider = () => {
+                slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+            };
+
+            nextBtn.addEventListener('click', () => {
+                currentIndex = (currentIndex + 1) % totalSlides;
+                updateSlider();
+            });
+
+            prevBtn.addEventListener('click', () => {
+                currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+                updateSlider();
+            });
         });
     </script>
 </body>
