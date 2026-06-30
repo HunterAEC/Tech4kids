@@ -11,92 +11,93 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body style="background-color: #f1f5f9; color: #0f172a;"></body>
+<body style="background-color: #f1f5f9; color: #0f172a;">
 
+    <a href="#main" class="skip-link">Skip to Main Content</a>
 
-<header>
-    <div class="header-container">
-        <div class="logo">
-            <a href="index.html">
-                <img src="images/logo.svg" alt="Tech4Kids Official Logo">
-            </a>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo.svg" alt="Tech4Kids Official Logo">
+                </a>
+            </div>
+
+            <button class="hamburger" id="hamburger-toggle" aria-label="Toggle Navigation Menu" aria-expanded="false">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <nav class="nav-menu" id="nav-menu">
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="learning.html">Learning Resources</a></li>
+                    <li><a href="donations.html">Donations</a></li>
+                    <li><a href="volunteer.html">Get Involved</a></li>
+                    <li><a href="faqs.html">FAQs</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
         </div>
+    </header>
 
-        <button class="hamburger" id="hamburger-toggle" aria-label="Toggle Navigation Menu" aria-expanded="false">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </button>
+    <main id="main">
+        <section class="section-center">
+            <h1>Empowering the Next Generation of Technologists</h1>
+            <p>Tech4Kids helps young people develop real-world technology skills through hands-on labs.</p>
 
-        <nav class="nav-menu" id="nav-menu">
+            <div class="image-gallery-row"
+                style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem;">
+                <img src="images/pexels-gustavo-fring-5621952.jpg"
+                    alt="An instructor guiding young students during an interactive computer lab coding module"
+                    class="home-image" loading="lazy" decoding="async" width="650" height="433"
+                    style="max-width: 250px; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); object-fit: cover;">
+
+                <img src="images/pexels-delot-18471530.jpg"
+                    alt="A technical engineering workstation displaying electronic components and testing arrays"
+                    class="home-image" loading="lazy" decoding="async" width="550" height="367"
+                    style="max-width: 250px; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); object-fit: cover;">
+            </div>
+        </section>
+
+        <section class="partners-section">
+            <h2>Recommended Partners</h2>
             <ul>
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="learning.html">Learning Resources</a></li>
-                <li><a href="donations.html">Donations</a></li>
-                <li><a href="volunteer.html">Get Involved</a></li>
-                <li><a href="faqs.html">FAQs</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
+                <li>
+                    <a href="https://www.smartphonefreechildhood.org/resource/the-good-tech-gift-guide" target="_blank"
+                        rel="noopener">
+                        The Good Tech Gift Guide
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.target.com/c/kids-electronics/-/N-5xt9q" target="_blank" rel="noopener">
+                        Target Kids' Electronics
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.amazon.com/cool-tech-gadgets-kids/s?k=cool+tech+gadgets+for+kids"
+                        target="_blank" rel="noopener">
+                        Amazon Cool Tech Gadgets for Kids
+                    </a>
+                </li>
             </ul>
-        </nav>
-    </div>
-</header>
+        </section>
+    </main>
 
-<main id="main">
-    <section class="section-center">
-        <h1>Empowering the Next Generation of Technologists</h1>
-        <p>Tech4Kids helps young people develop real-world technology skills through hands-on labs.</p>
-
-        <div class="image-gallery-row"
-            style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem;">
-            <img src="images/pexels-gustavo-fring-5621952.jpg"
-                alt="An instructor guiding young students during an interactive computer lab coding module"
-                class="home-image" loading="lazy" decoding="async" width="650" height="433"
-                style="max-width: 250px; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); object-fit: cover;">
-
-            <img src="images/pexels-delot-18471530.jpg"
-                alt="A technical engineering workstation displaying electronic components and testing arrays"
-                class="home-image" loading="lazy" decoding="async" width="550" height="367"
-                style="max-width: 250px; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); object-fit: cover;">
+    <footer>
+        <p>&copy; 2026 Tech4Kids Organization. All rights reserved.</p>
+        <div class="footer-contact">
+            <p>Contact us: <a href="mailto:ttech4kids@gmail.com">ttech4kids@gmail.com</a></p>
         </div>
-    </section>
+        <div class="social-links">
+            <a href="https://x.com/Tech4kidz26" target="_blank">X (formerly Twitter): @Tech4kidz26</a> |
+            <a href="https://facebook.com" target="_blank">Facebook</a> |
+            <a href="https://instagram.com" target="_blank">Instagram</a>
+        </div>
+    </footer>
 
-    <section class="partners-section">
-        <h2>Recommended Partners</h2>
-        <ul>
-            <li>
-                <a href="https://www.smartphonefreechildhood.org/resource/the-good-tech-gift-guide" target="_blank"
-                    rel="noopener">
-                    The Good Tech Gift Guide
-                </a>
-            </li>
-            <li>
-                <a href="https://www.target.com/c/kids-electronics/-/N-5xt9q" target="_blank" rel="noopener">
-                    Target Kids' Electronics
-                </a>
-            </li>
-            <li>
-                <a href="https://www.amazon.com/cool-tech-gadgets-kids/s?k=cool+tech+gadgets+for+kids" target="_blank"
-                    rel="noopener">
-                    Amazon Cool Tech Gadgets for Kids
-                </a>
-            </li>
-        </ul>
-    </section>
-</main>
-
-<footer>
-    <p>&copy; 2026 Tech4Kids Organization. All rights reserved.</p>
-    <div class="footer-contact">
-        <p>Contact us: <a href="mailto:ttech4kids@gmail.com">ttech4kids@gmail.com</a></p>
-    </div>
-    <div class="social-links">
-        <a href="https://x.com/Tech4kidz26" target="_blank">X (formerly Twitter): @Tech4kidz26</a> |
-        <a href="https://facebook.com" target="_blank">Facebook</a> |
-        <a href="https://instagram.com" target="_blank">Instagram</a>
-    </div>
-</footer>
-
-<script src="js/main.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>

@@ -16,7 +16,7 @@
 }
 
 body {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     line-height: 1.6;
     background: var(--bg-light);
     color: var(--text-main);
@@ -136,42 +136,21 @@ main {
     margin: 0 auto;
 }
 
-.card-container {
-    display: flex;
-    gap: 2rem;
-    flex-wrap: wrap;
-    justify-content: center;
+.faq-section {
+    max-width: 800px;
+    margin: 2.5rem auto;
+    padding: 0 1rem;
 }
 
-.card {
-    background: var(--white);
-    padding: 2rem;
-    border-radius: 12px;
-    max-width: 350px;
-    border: 1px solid var(--border-color);
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+.faq-item {
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border-color);
 }
 
-.cta-button {
-    display: inline-block;
-    background: var(--primary-color);
-    color: var(--white);
-    text-decoration: none;
-    padding: .75rem 1.5rem;
-    border-radius: 8px;
-    border: none;
-    cursor: pointer;
-    font-size: 1rem;
-    font-weight: 500;
-    transition: background-color 0.2s ease, transform 0.1s ease;
-}
-
-.cta-button:hover {
-    background-color: var(--primary-hover);
-}
-
-.cta-button:active {
-    transform: scale(0.98);
+.faq-item h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
 }
 
 form {
@@ -210,6 +189,24 @@ select:focus {
     outline: none;
     border-color: var(--primary-color);
     box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.cta-button {
+    display: inline-block;
+    background: var(--primary-color);
+    color: var(--white);
+    text-decoration: none;
+    padding: .75rem 1.5rem;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.cta-button:hover {
+    background-color: var(--primary-hover);
 }
 
 .partners-section h2 {
@@ -255,16 +252,9 @@ footer {
     text-align: center;
     padding: 3rem 2rem;
     margin-top: 4rem;
-    border-top: 1px solid #1e293b;
 }
 
 footer a {
     color: var(--white);
     text-decoration: none;
-    transition: color 0.2s ease;
-}
-
-footer a:hover {
-    color: var(--primary-color);
-    text-decoration: underline;
 }

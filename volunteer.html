@@ -7,113 +7,17 @@
     <title>Get Involved | Tech4Kids</title>
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     <link rel="stylesheet" href="css/style.css">
-    <style>
-        /* Embedded Interactive Calendar Styles */
-        .calendar-container {
-            max-width: 600px;
-            margin: 2rem auto;
-            background: var(--white);
-            padding: 1.5rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-            text-align: center;
-        }
-
-        .calendar-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 1rem;
-        }
-
-        .calendar-header h3 {
-            margin: 0;
-            font-family: 'Montserrat', sans-serif;
-            color: var(--primary-color);
-        }
-
-        .cal-btn {
-            background: var(--cta-color);
-            color: var(--white);
-            border: none;
-            padding: 0.4rem 0.8rem;
-            border-radius: 4px;
-            cursor: pointer;
-            font-weight: bold;
-        }
-
-        .calendar-grid {
-            display: grid;
-            grid-template-columns: repeat(7, 1fr);
-            gap: 5px;
-        }
-
-        .weekday {
-            font-weight: 600;
-            color: var(--accent-color);
-            padding: 5px 0;
-            font-size: 0.85rem;
-            text-transform: uppercase;
-        }
-
-        .day {
-            padding: 10px 0;
-            background: var(--bg-light);
-            border-radius: 4px;
-            font-size: 0.95rem;
-            cursor: pointer;
-            transition: all 0.2s;
-        }
-
-        .day:hover {
-            background: #E2E8F0;
-        }
-
-        .day.selected {
-            background: var(--primary-color) !important;
-            color: var(--white);
-            font-weight: bold;
-        }
-
-        .day.empty {
-            background: transparent;
-            cursor: default;
-        }
-    </style>
 </head>
-<main id="main">
-    <section class="section-center">
-        <h1>Get Involved With Us</h1>
-        <p>Submit your application parameters below to connect with our lab team.</p>
-    </section>
-
-    <section class="form-section">
-        <form action="#" method="POST">
-            <label for="fname">First Name</label>
-            <input type="text" id="fname" name="firstname" autocomplete="given-name" required>
-
-            <label for="email">Email Address</label>
-            <input type="email" id="email" name="useremail" autocomplete="email" required>
-
-            <label for="message">Message / Notes</label>
-            <textarea id="message" name="usermessage" rows="5" required></textarea>
-
-            <button type="submit" class="cta-button">Submit Details</button>
-        </form>
-    </section>
-</main>
 
 <body>
 
-    <a href="#main" class="skip-link"
-        style="position: absolute; left: -10000px; top: auto; width: 1px; height: 1px; overflow: hidden;">Skip
-        to Main Content</a>
+    <a href="#main" class="skip-link">Skip to Main Content</a>
 
     <header>
         <div class="header-container">
             <div class="logo">
                 <a href="index.html">
-                    <img src="images/logo.svg" alt="Tech4Kids Official Logo" style="height: 42px; display: block;">
+                    <img src="images/logo.svg" alt="Tech4Kids Official Logo">
                 </a>
             </div>
 
@@ -137,89 +41,23 @@
     </header>
 
     <main id="main">
-        <section class="form-intro" style="text-align: center;">
-            <h1>Join the Program</h1>
-            <p>Select an upcoming orientation date on our live schedule, then register as a mentor or student
-                participant below.</p>
-
-            <!-- Image optimized and rigorously constrained down under 14% -->
-            <img src="images/pexels-yankrukov-8199624.jpg"
-                alt="Tech volunteer guiding a young student on a laptop computer" class="page-image" loading="lazy"
-                decoding="async" width="600" height="400" style="max-width: 100px; margin: 1rem auto; display: block;">
-        </section>
-
-        <!-- Interactive JavaScript Calendar Component -->
-        <section class="calendar-section">
-            <div class="calendar-container">
-                <div class="calendar-header">
-                    <button class="cal-btn" id="prev-month">&lt;</button>
-                    <h3 id="month-year-display"></h3>
-                    <button class="cal-btn" id="next-month">&gt;</button>
-                </div>
-                <div class="calendar-grid" id="calendar-days">
-                    <!-- Days generated dynamically by script -->
-                </div>
-            </div>
+        <section class="section-center">
+            <h1>Get Involved With Us</h1>
+            <p>Submit your application parameters below to connect with our lab team.</p>
         </section>
 
         <section class="form-section">
             <form action="#" method="POST">
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" name="firstname" autocomplete="given-name" required>
 
-                <fieldset>
-                    <legend>Personal Details</legend>
-                    <p>
-                        <label for="fname">First Name:</label>
-                        <input type="text" id="fname" name="firstname" autocomplete="given-name" required>
-                    </p>
-                    <p>
-                        <label for="lname">Last Name:</label>
-                        <input type="text" id="lname" name="lastname" autocomplete="family-name" required>
-                    </p>
-                    <p>
-                        <label for="useremail">Email Address:</label>
-                        <input type="email" id="useremail" name="email" autocomplete="email" required>
-                    </p>
-                    <p>
-                        <label for="userphone">Phone Number:</label>
-                        <input type="tel" id="userphone" name="phone" pattern="[0-9]{10}" placeholder="1234567890">
-                    </p>
-                    <p>
-                        <label for="usercity">City:</label>
-                        <input type="text" id="usercity" name="city">
-                    </p>
-                </fieldset>
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="useremail" autocomplete="email" required>
 
-                <fieldset>
-                    <legend>Program Preferences</legend>
-                    <p>
-                        <label for="startdate">Selected Orientation / Start Date:</label>
-                        <input type="date" id="startdate" name="start_date" required>
-                    </p>
-                    <p>
-                        <label for="userrole">Applying As:</label>
-                        <select id="userrole" name="role">
-                            <option value="student">Student Participant</option>
-                            <option value="volunteer">Volunteer Instructor</option>
-                            <option value="donor">Corporate Partner</option>
-                        </select>
-                    </p>
-                    <p>
-                        <label for="experience">Years of Tech Experience:</label>
-                        <input type="number" id="experience" name="years_exp" min="0">
-                    </p>
-                    <p>
-                        <label for="bgcheck">Willing to complete background verification check?</label>
-                        <input type="checkbox" id="bgcheck" name="background_check" value="yes">
-                    </p>
-                    <p>
-                        <label for="comments">Special Accommodations or Notes:</label>
-                        <textarea id="comments" name="user_comments" rows="4" cols="30"></textarea>
-                    </p>
-                </fieldset>
+                <label for="message">Message / Notes</label>
+                <textarea id="message" name="usermessage" rows="5" required></textarea>
 
-                <div class="form-submit">
-                    <button type="submit" class="cta-button">Submit Registration Application</button>
-                </div>
+                <button type="submit" class="cta-button">Submit Details</button>
             </form>
         </section>
     </main>
@@ -236,69 +74,7 @@
         </div>
     </footer>
 
-    <!-- Dedicated Interactive Calendar Logic Block -->
-    <script>
-        const date = new Date();
-        const dateInput = document.getElementById('startdate');
-
-        const renderCalendar = () => {
-            date.setDate(1);
-            const monthDays = document.getElementById('calendar-days');
-            const lastDay = new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate();
-            const firstDayIndex = date.getDay();
-            const monthYearDisplay = document.getElementById('month-year-display');
-
-            const months = [
-                "January", "February", "March", "April", "May", "June",
-                "July", "August", "September", "October", "November", "December"
-            ];
-
-            monthYearDisplay.innerText = `${months[date.getMonth()]} ${date.getFullYear()}`;
-            monthDays.innerHTML = "";
-
-            // Render Weekday Labels
-            const weekdays = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-            weekdays.forEach(day => {
-                monthDays.innerHTML += `<div class="weekday">${day}</div>`;
-            });
-
-            // Blank space fillers for prior month layout padding
-            for (let x = firstDayIndex; x > 0; x--) {
-                monthDays.innerHTML += `<div class="day empty"></div>`;
-            }
-
-            // Populate regular monthly operational days
-            for (let i = 1; i <= lastDay; i++) {
-                const dayString = `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}-${String(i).padStart(2, '0')}`;
-                monthDays.innerHTML += `<div class="day" data-date="${dayString}">${i}</div>`;
-            }
-
-            // Wire up internal selection tracking
-            document.querySelectorAll('.calendar-grid .day:not(.empty)').forEach(dayDiv => {
-                dayDiv.addEventListener('click', (e) => {
-                    document.querySelectorAll('.calendar-grid .day').forEach(d => d.classList.remove('selected'));
-                    e.target.classList.add('selected');
-                    dateInput.value = e.target.getAttribute('data-date');
-                });
-            });
-        };
-
-        document.getElementById('prev-month').addEventListener('click', () => {
-            date.setMonth(date.getMonth() - 1);
-            renderCalendar();
-        });
-
-        document.getElementById('next-month').addEventListener('click', () => {
-            date.setMonth(date.getMonth() + 1);
-            renderCalendar();
-        });
-
-        // Initialize display context immediately
-        renderCalendar();
-    </script>
     <script src="js/main.js"></script>
 </body>
 
 </html>
-
-```
