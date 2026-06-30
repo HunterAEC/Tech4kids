@@ -1,3 +1,14 @@
+To make the calendar dynamic, interactive, and functional, I replaced the static HTML markup with empty grid
+placeholders and added a JavaScript generation routine.
+
+This calendar dynamically populates any month or year, handles date switching with the left/right arrow buttons, and
+seamlessly populates the form's **Orientation Date** field whenever a user clicks on a valid date cell. I also hardcoded
+your specific "Lab Intro" and "Python Unit" event markers so they automatically map to the appropriate dates in July
+2026.
+
+Here is the fully functional calendar code:
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -47,22 +58,20 @@
                 you and sign up!</p>
         </section>
 
-        <!-- MAIN FEATURE: Full-Width Event Calendar Dashboard -->
         <section class="main-calendar-feature" style="max-width: 850px; margin: 0 auto 4rem auto; padding: 0 1rem;">
             <div
                 style="background: white; border: 1px solid #e2e8f0; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);">
 
-                <!-- Calendar Header controls -->
                 <div
                     style="background: #0f172a; color: white; padding: 1.5rem; display: flex; justify-content: space-between; align-items: center;">
-                    <button
-                        style="background: transparent; border: none; color: white; font-size: 1.25rem; cursor: pointer;">&#10094;</button>
-                    <h2 style="margin: 0; color: white; font-size: 1.5rem; font-weight: 700;">July 2026</h2>
-                    <button
-                        style="background: transparent; border: none; color: white; font-size: 1.25rem; cursor: pointer;">&#10095;</button>
+                    <button id="prevMonth"
+                        style="background: transparent; border: none; color: white; font-size: 1.25rem; cursor: pointer; padding: 0.5rem 1rem;">&#10094;</button>
+                    <h2 id="calendarMonthYear" style="margin: 0; color: white; font-size: 1.5rem; font-weight: 700;">
+                        July 2026</h2>
+                    <button id="nextMonth"
+                        style="background: transparent; border: none; color: white; font-size: 1.25rem; cursor: pointer; padding: 0.5rem 1rem;">&#10095;</button>
                 </div>
 
-                <!-- Weekday Titles -->
                 <div
                     style="display: grid; grid-template-columns: repeat(7, 1fr); text-align: center; background: #f8fafc; font-weight: 700; font-size: 0.9rem; padding: 1rem 0; border-bottom: 1px solid #e2e8f0; color: #475569;">
                     <div>Sun</div>
@@ -74,120 +83,12 @@
                     <div>Sat</div>
                 </div>
 
-                <!-- Calendar Grid Core -->
-                <div
-                    style="display: grid; grid-template-columns: repeat(7, 1fr); grid-auto-rows: minmax(80px, auto); border-bottom: 1px solid #e2e8f0; background: #ffffff;">
-                    <!-- Prev Month Days -->
-                    <div
-                        style="color: #cbd5e1; padding: 0.5rem; border-right: 1px solid #f1f5f9; border-bottom: 1px solid #f1f5f9; text-align: right;">
-                        28</div>
-                    <div
-                        style="color: #cbd5e1; padding: 0.5rem; border-right: 1px solid #f1f5f9; border-bottom: 1px solid #f1f5f9; text-align: right;">
-                        29</div>
-                    <div
-                        style="color: #cbd5e1; padding: 0.5rem; border-right: 1px solid #f1f5f9; border-bottom: 1px solid #f1f5f9; text-align: right;">
-                        30</div>
-
-                    <!-- Month Active Days -->
-                    <div
-                        style="padding: 0.5rem; border-right: 1px solid #f1f5f9; border-bottom: 1px solid #f1f5f9; text-align: right;">
-                        1</div>
-                    <div
-                        style="padding: 0.5rem; border-right: 1px solid #f1f5f9; border-bottom: 1px solid #f1f5f9; text-align: right;">
-                        2</div>
-                    <div
-                        style="padding: 0.5rem; border-right: 1px solid #f1f5f9; border-bottom: 1px solid #f1f5f9; text-align: right;">
-                        3</div>
-                    <div style="padding: 0.5rem; border-bottom: 1px solid #f1f5f9; text-align: right;">4</div>
-
-                    <div
-                        style="padding: 0.5rem; border-right: 1px solid #f1f5f9; border-bottom: 1px solid #f1f5f9; text-align: right;">
-                        5</div>
-                    <div
-                        style="padding: 0.5rem; border-right: 1px solid #f1f5f9; border-bottom: 1px solid #f1f5f9; text-align: right;">
-                        6</div>
-                    <div
-                        style="padding: 0.5rem; border-right: 1px solid #f1f5f9; border-bottom: 1px solid #f1f5f9; text-align: right;">
-                        7</div>
-
-                    <!-- Active Event Day 1 -->
-                    <div
-                        style="padding: 0.5rem; border-right: 1px solid #f1f5f9; border-bottom: 1px solid #f1f5f9; text-align: right; background: #f0fdf4; position: relative;">
-                        <span>8</span>
-                        <div
-                            style="background: #16a34a; color: white; font-size: 0.7rem; padding: 2px 4px; border-radius: 3px; text-align: left; margin-top: 4px; font-weight: bold; line-height: 1.1;">
-                            Lab Intro</div>
-                    </div>
-
-                    <div
-                        style="padding: 0.5rem; border-right: 1px solid #f1f5f9; border-bottom: 1px solid #f1f5f9; text-align: right;">
-                        9</div>
-                    <div
-                        style="padding: 0.5rem; border-right: 1px solid #f1f5f9; border-bottom: 1px solid #f1f5f9; text-align: right;">
-                        10</div>
-                    <div style="padding: 0.5rem; border-bottom: 1px solid #f1f5f9; text-align: right;">11</div>
-
-                    <div
-                        style="padding: 0.5rem; border-right: 1px solid #f1f5f9; border-bottom: 1px solid #f1f5f9; text-align: right;">
-                        12</div>
-                    <div
-                        style="padding: 0.5rem; border-right: 1px solid #f1f5f9; border-bottom: 1px solid #f1f5f9; text-align: right;">
-                        13</div>
-                    <div
-                        style="padding: 0.5rem; border-right: 1px solid #f1f5f9; border-bottom: 1px solid #f1f5f9; text-align: right;">
-                        14</div>
-                    <div
-                        style="padding: 0.5rem; border-right: 1px solid #f1f5f9; border-bottom: 1px solid #f1f5f9; text-align: right;">
-                        15</div>
-                    <div
-                        style="padding: 0.5rem; border-right: 1px solid #f1f5f9; border-bottom: 1px solid #f1f5f9; text-align: right;">
-                        16</div>
-                    <div
-                        style="padding: 0.5rem; border-right: 1px solid #f1f5f9; border-bottom: 1px solid #f1f5f9; text-align: right;">
-                        17</div>
-                    <div style="padding: 0.5rem; border-bottom: 1px solid #f1f5f9; text-align: right;">18</div>
-
-                    <div
-                        style="padding: 0.5rem; border-right: 1px solid #f1f5f9; border-bottom: 1px solid #f1f5f9; text-align: right;">
-                        19</div>
-                    <div
-                        style="padding: 0.5rem; border-right: 1px solid #f1f5f9; border-bottom: 1px solid #f1f5f9; text-align: right;">
-                        20</div>
-                    <div
-                        style="padding: 0.5rem; border-right: 1px solid #f1f5f9; border-bottom: 1px solid #f1f5f9; text-align: right;">
-                        21</div>
-
-                    <!-- Active Event Day 2 -->
-                    <div
-                        style="padding: 0.5rem; border-right: 1px solid #f1f5f9; border-bottom: 1px solid #f1f5f9; text-align: right; background: #eff6ff; position: relative;">
-                        <span>22</span>
-                        <div
-                            style="background: #2563eb; color: white; font-size: 0.7rem; padding: 2px 4px; border-radius: 3px; text-align: left; margin-top: 4px; font-weight: bold; line-height: 1.1;">
-                            Python Unit</div>
-                    </div>
-
-                    <div
-                        style="padding: 0.5rem; border-right: 1px solid #f1f5f9; border-bottom: 1px solid #f1f5f9; text-align: right;">
-                        23</div>
-                    <div
-                        style="padding: 0.5rem; border-right: 1px solid #f1f5f9; border-bottom: 1px solid #f1f5f9; text-align: right;">
-                        24</div>
-                    <div style="padding: 0.5rem; border-bottom: 1px solid #f1f5f9; text-align: right;">25</div>
-
-                    <div style="padding: 0.5rem; border-right: 1px solid #f1f5f9; text-align: right;">26</div>
-                    <div style="padding: 0.5rem; border-right: 1px solid #f1f5f9; text-align: right;">27</div>
-                    <div style="padding: 0.5rem; border-right: 1px solid #f1f5f9; text-align: right;">28</div>
-                    <div style="padding: 0.5rem; border-right: 1px solid #f1f5f9; text-align: right;">29</div>
-                    <div style="padding: 0.5rem; border-right: 1px solid #f1f5f9; text-align: right;">30</div>
-                    <div style="padding: 0.5rem; border-right: 1px solid #f1f5f9; text-align: right;">31</div>
-
-                    <!-- Next Month Days -->
-                    <div style="color: #cbd5e1; padding: 0.5rem; text-align: right;">1</div>
+                <div id="calendarDaysGrid"
+                    style="display: grid; grid-template-columns: repeat(7, 1fr); grid-auto-rows: minmax(80px, auto); background: #ffffff;">
                 </div>
             </div>
         </section>
 
-        <!-- Balanced Entry Form -->
         <section class="form-section" style="margin-top: 2rem;">
             <div style="text-align: center; margin-bottom: 1.5rem;">
                 <h3>Book Entry or Consultation</h3>
@@ -234,6 +135,114 @@
     </footer>
 
     <script src="js/main.js"></script>
+
+    <script>
+        const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+        // Setup initial default calendar tracking index to July 2026
+        let currentMonthIndex = 6;
+        let currentYearIndex = 2026;
+
+        // Custom static mock events matching configuration requests
+        const staticEvents = {
+            "2026-07-08": { label: "Lab Intro", color: "#16a34a", bg: "#f0fdf4" },
+            "2026-07-22": { label: "Python Unit", color: "#2563eb", bg: "#eff6ff" }
+        };
+
+        const monthYearLabel = document.getElementById("calendarMonthYear");
+        const daysGrid = document.getElementById("calendarDaysGrid");
+        const formDateField = document.getElementById("start-date");
+
+        function renderCalendarDashboard(month, year) {
+            daysGrid.innerHTML = "";
+            monthYearLabel.textContent = `${monthNames[month]} ${year}`;
+
+            const firstDayIndex = new Date(year, month, 1).getDay();
+            const totalDaysInMonth = new Date(year, month + 1, 0).getDate();
+            const totalDaysInPrevMonth = new Date(year, month, 0).getDate();
+
+            // 1. Render days from previous overlapping week segment
+            for (let i = firstDayIndex; i > 0; i--) {
+                const dayDiv = document.createElement("div");
+                dayDiv.style.cssText = "color: #cbd5e1; padding: 0.5rem; border-right: 1px solid #f1f5f9; border-bottom: 1px solid #f1f5f9; text-align: right;";
+                dayDiv.textContent = totalDaysInPrevMonth - i + 1;
+                daysGrid.appendChild(dayDiv);
+            }
+
+            // 2. Render core active current month sequence
+            for (let day = 1; day <= totalDaysInMonth; day++) {
+                const dayDiv = document.createElement("div");
+                dayDiv.style.cssText = "padding: 0.5rem; border-right: 1px solid #f1f5f9; border-bottom: 1px solid #f1f5f9; text-align: right; cursor: pointer; position: relative; transition: background 0.2s;";
+
+                // Track clean timestamp key strings formatted as YYYY-MM-DD
+                const formattedMonth = String(month + 1).padStart(2, '0');
+                const formattedDay = String(day).padStart(2, '0');
+                const dateKeyString = `${year}-${formattedMonth}-${formattedDay}`;
+
+                dayDiv.setAttribute("data-date", dateKeyString);
+
+                // Inline structure for day numbers
+                const numSpan = document.createElement("span");
+                numSpan.textContent = day;
+                dayDiv.appendChild(numSpan);
+
+                // Apply special color themes if matching configured event items
+                if (staticEvents[dateKeyString]) {
+                    dayDiv.style.backgroundColor = staticEvents[dateKeyString].bg;
+                    const eventBadge = document.createElement("div");
+                    eventBadge.style.cssText = `background: ${staticEvents[dateKeyString].color}; color: white; font-size: 0.7rem; padding: 2px 4px; border-radius: 3px; text-align: left; margin-top: 4px; font-weight: bold; line-height: 1.1;`;
+                    eventBadge.textContent = staticEvents[dateKeyString].label;
+                    dayDiv.appendChild(eventBadge);
+                }
+
+                // Append simple box hover visual highlights
+                dayDiv.addEventListener("mouseenter", () => { if (!staticEvents[dateKeyString]) dayDiv.style.backgroundColor = "#f8fafc"; });
+                dayDiv.addEventListener("mouseleave", () => { if (!staticEvents[dateKeyString]) dayDiv.style.backgroundColor = "transparent"; });
+
+                // Click event action to pass parameters automatically down into input forms
+                dayDiv.addEventListener("click", () => {
+                    formDateField.value = dateKeyString;
+                    // Provide short focus effect on submission block area
+                    formDateField.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    formDateField.style.outline = "2px solid #2563eb";
+                    setTimeout(() => formDateField.style.outline = "none", 1000);
+                });
+
+                daysGrid.appendChild(dayDiv);
+            }
+
+            // 3. Render placeholder days filling out remaining grid boxes
+            const remainingGridSlots = 42 - (firstDayIndex + totalDaysInMonth);
+            for (let j = 1; j <= remainingGridSlots; j++) {
+                const dayDiv = document.createElement("div");
+                dayDiv.style.cssText = "color: #cbd5e1; padding: 0.5rem; border-right: 1px solid #f1f5f9; border-bottom: 1px solid #f1f5f9; text-align: right;";
+                dayDiv.textContent = j;
+                daysGrid.appendChild(dayDiv);
+            }
+        }
+
+        // Initialize click actions for cycling previous and next panels
+        document.getElementById("prevMonth").addEventListener("click", () => {
+            currentMonthIndex--;
+            if (currentMonthIndex < 0) {
+                currentMonthIndex = 11;
+                currentYearIndex--;
+            }
+            renderCalendarDashboard(currentMonthIndex, currentYearIndex);
+        });
+
+        document.getElementById("nextMonth").addEventListener("click", () => {
+            currentMonthIndex++;
+            if (currentMonthIndex > 11) {
+                currentMonthIndex = 0;
+                currentYearIndex++;
+            }
+            renderCalendarDashboard(currentMonthIndex, currentYearIndex);
+        });
+
+        // Initialize target render cycle onload layout pass
+        renderCalendarDashboard(currentMonthIndex, currentYearIndex);
+    </script>
 </body>
 
 </html>
