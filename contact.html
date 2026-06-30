@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Get Involved | Tech4Kids</title>
+    <title>Contact Us | Tech4Kids</title>
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -32,9 +32,9 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="learning.html">Learning Resources</a></li>
                     <li><a href="donations.html">Donations</a></li>
-                    <li><a href="volunteer.html" class="active">Get Involved</a></li>
+                    <li><a href="volunteer.html">Get Involved</a></li>
                     <li><a href="faqs.html">FAQs</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="contact.html" class="active">Contact Us</a></li>
                 </ul>
             </nav>
         </div>
@@ -42,23 +42,53 @@
 
     <main id="main">
         <section class="section-center">
-            <h1>Get Involved With Us</h1>
-            <p>Submit your application parameters below to connect with our lab team.</p>
+            <h1>Contact Us</h1>
+            <p>Have a question or want to get in touch? Drop us a message below.</p>
         </section>
 
         <section class="form-section">
-            <form action="#" method="POST">
+            <!-- Form action now targets your thank you page -->
+            <form action="thank-you.html" method="POST">
                 <label for="fname">First Name</label>
                 <input type="text" id="fname" name="firstname" autocomplete="given-name" required>
 
                 <label for="email">Email Address</label>
                 <input type="email" id="email" name="useremail" autocomplete="email" required>
 
+                <!-- Calendar element for selecting a contact/follow-up date -->
+                <label for="contact-date">Preferred Callback / Follow-up Date</label>
+                <input type="date" id="contact-date" name="contactdate" required>
+
                 <label for="message">Message / Notes</label>
                 <textarea id="message" name="usermessage" rows="5" required></textarea>
 
                 <button type="submit" class="cta-button">Submit Details</button>
             </form>
+        </section>
+
+        <!-- Visual separator line -->
+        <hr style="border: 0; border-top: 1px solid var(--border-color); max-width: 600px; margin: 4rem auto;">
+
+        <!-- Other Charities Grid Layout -->
+        <section class="partners-section" style="max-width: 800px; margin: 0 auto;">
+            <h2>Other Wonderful Charities for Kids</h2>
+            <ul>
+                <li>
+                    <a href="https://www.unicef.org" target="_blank" rel="noopener">
+                        UNICEF Official Site
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.savethechildren.org" target="_blank" rel="noopener">
+                        Save the Children
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.bgca.org" target="_blank" rel="noopener">
+                        Boys & Girls Clubs of America
+                    </a>
+                </li>
+            </ul>
         </section>
     </main>
 
