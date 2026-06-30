@@ -58,11 +58,23 @@ hr {
 /* Global Content Layout Image Constraints (Cut down by 60%) */
 .page-image {
     max-width: 40%;
-    /* Reduced by 60%, leaving it at 40% width */
+    /* 40% width for general sub-pages */
     height: auto;
     border-radius: 8px;
     margin: 1.5rem auto;
     /* Centered using auto margins */
+    display: block;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* Specific Home Page Image Overrides (Reduced by an additional 50%) */
+.home-image {
+    max-width: 20%;
+    /* Brought down to 20% width to fix home size scaling */
+    height: auto;
+    border-radius: 8px;
+    margin: 1.5rem auto;
+    /* Clean layout auto-centering */
     display: block;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 }
@@ -359,9 +371,14 @@ footer p {
         border-radius: 0;
     }
 
-    /* Override smaller image sizes on mobile screens for readability */
+    /* Override smaller image dimensions on narrow mobile displays */
     .page-image {
         max-width: 90%;
+    }
+
+    .home-image {
+        max-width: 80%;
+        /* Expands nicely for clear sightlines on small mobile viewports */
     }
 }
 
