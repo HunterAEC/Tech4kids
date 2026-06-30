@@ -1,53 +1,407 @@
+/* --- Google Fonts Import (Fulfills project font requirements) --- */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&family=Roboto+Mono&display=swap');
+
+/* --- Root Variables Configuration --- */
 :root {
+    /* Your exact specified color palette */
     --primary-color: #750A0A;
     --secondary-color: #F8FAFC;
     --accent-color: #64748B;
     --cta-color: #0F172A;
+    --white: #FFFFFF;
+}
+
+/* --- Global & Base Settings (Using em units & active whitespace) --- */
+* {
+    box-sizing: border-box;
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
+    /* Font families with at least 2 fallbacks */
+    font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--secondary-color);
+    color: var(--cta-color);
+    line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Montserrat', 'Arial Black', sans-serif;
+    margin-bottom: 0.5em;
+    /* Passive Whitespace */
+}
+
+p {
+    font-family: 'Open Sans', Verdana, sans-serif;
+    margin-bottom: 1.2em;
+}
+
+img.page-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 1.5em auto;
+    /* Active Whitespace spacing */
+    border-radius: 4px;
+}
+
+/* --- Global Header & Layout Core --- */
+header {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 1em 2em;
+    /* Flexible relative units */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 75em;
+    margin: 0 auto;
+}
+
+.logo a {
+    color: var(--white);
+    font-size: 1.5em;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+/* --- Navigation & Hover Settings --- */
+.nav-menu ul {
+    display: flex;
+    list-style: none;
     margin: 0;
     padding: 0;
 }
 
-header {
-    background-color: var(--primary-color);
-    color: white;
-    padding: 1rem;
+.nav-menu li {
+    margin-left: 1.5em;
 }
 
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.nav-menu a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 600;
+    transition: color 0.3s ease;
 }
 
-.logo {
-    font-size: 24px;
+/* Hover Selectors requirement */
+.nav-menu a:hover,
+.nav-menu a.active {
+    color: var(--accent-color);
 }
 
-.hamburger-menu {
+/* --- Hamburger Icon Configuration --- */
+.hamburger {
     display: none;
+    /* Hidden by default on desktops */
     cursor: pointer;
+    background: transparent;
+    border: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    padding: 0;
 }
 
-nav span {
-    display: block;
-    width: 25px;
+.hamburger .bar {
     height: 3px;
-    background-color: white;
-    margin: 5px 0;
+    width: 100%;
+    background-color: var(--white);
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
 }
 
-.main-content {
-    padding: 1rem;
+/* --- Main Layout Sections --- */
+main {
+    max-width: 75em;
+    margin: 2em auto;
+    /* Balanced Active Whitespace */
+    padding: 0 1.5em;
 }
 
-.hero {
+.hero-banner {
     text-align: center;
-    padding: 5rem 0;
-    background-image: url('hero-background.jpg');
+    padding: 5em 1em;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/hero-background.jpg');
     background-size: cover;
-    color: white;
+    background-position: center;
+    color: var(--white);
+}
+
+/* --- Home Page CSS Grid Section --- */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5em;
+    margin-top: 2em;
+}
+
+.grid-item {
+    background: var(--white);
+    padding: 1.5em;
+    border-left: 4px solid var(--primary-color);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+/* --- Donations Page Table Styles --- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2em 0;
+}
+
+th,
+td {
+    padding: 0.8em;
+    text-align: left;
+    border-bottom: 1px solid var(--accent-color);
+}
+
+th {
+    background-color: var(--cta-color);
+    color: var(--white);
+}
+
+/* --- Volunteer Page Form Elements --- */
+fieldset {
+    border: 1px solid var(--accent-color);
+    border-radius: 4px;
+    padding: 1.5em;
+    margin-bottom: 2em;
+}
+
+legend {
+    font-weight: bold;
+    padding: 0 0.5em;
+    color: var(--primary-color);
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 0.6em;
+    margin-top: 0.4em;
+    border: 1px solid var(--accent-color);
+    border-radius: 4px;
+}
+
+.cta-button {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 0.8em 2em;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.cta-button:hover {
+    background-color: var(--cta-color);
+}
+
+/* --- FAQ Page JavaScript Toggle Styles --- */
+.accordion-trigger {
+    background-color: var(--cta-color);
+    color: var(--white);
+    width: 100%;
+    text-align: left;
+    padding: 1em;
+    border: none;
+    cursor: pointer;
+    margin-top: 0.5em;
+    font-weight: bold;
+}
+
+.accordion-panel {
+    background-color: var(--white);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    padding: 0 1em;
+}
+
+/* --- Global Footer Structure --- */
+footer {
+    background-color: var(--cta-color);
+    color: var(--white);
+    text-align: center;
+    padding: 2em 1em;
+    margin-top: 4em;
+}
+
+footer a {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: var(--primary-color);
+}
+
+
+/* ==========================================================================
+   5-VIEWPORT RESPONSIVE DESIGN MEDIA QUERIES (Project Criteria)
+   ========================================================================== */
+
+/* 1. MOBILE DEVICES (Up to 480px) */
+@media screen and (max-width: 30em) {
+    body {
+        font-size: 0.9em;
+    }
+
+    header {
+        padding: 0.8em 1em;
+    }
+
+    .hero-banner {
+        padding: 3em 1em;
+    }
+}
+
+/* 2. TABLET DEVICES (481px to 768px - Handles Hamburger Transition) */
+@media screen and (max-width: 48em) {
+    .hamburger {
+        display: flex;
+        /* Displays mobile hamburger */
+    }
+
+    .nav-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: var(--primary-color);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out;
+    }
+
+    .nav-menu ul {
+        flex-direction: column;
+        width: 100%;
+        padding: 1em 0;
+        align-items: center;
+    }
+
+    .nav-menu li {
+        margin: 0.8em 0;
+        margin-left: 0;
+    }
+
+    .nav-menu.active {
+        max-height: 25em;
+        /* Show menu when toggle function runs */
+    }
+
+    /* Hamburger Animation Transitions */
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+    }
+}
+
+/* 3. DESKTOP DEVICES (769px to 1024px) */
+@media screen and (min-width: 48.0625em) and (max-width: 64em) {
+    main {
+        padding: 0 2em;
+    }
+}
+
+/* 4. LARGE DESKTOP DEVICES (1025px and up) */
+@media screen and (min-width: 64.0625em) {
+    body {
+        font-size: 1.1em;
+    }
+
+    .header-container,
+    main {
+        max-width: 85em;
+    }
+}
+
+/* 5. PRINT STYLES (When page is printed directly) */
+@media print {
+    body {
+        background: white;
+        color: black;
+        font-size: 12pt;
+    }
+
+    header,
+    footer,
+    .hamburger,
+    .cta-button,
+    .video-wrapper {
+        display: none !important;
+        /* Strips UI components out for crisp paper printing */
+    }
+
+    main {
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    a {
+        text-decoration: underline;
+        color: black;
+    }
+}
+
+/* --- Mobile Touch & Responsive Enhancements --- */
+@media screen and (max-width: 48em) {
+
+    /* 1. Scale images gently so they don't crowd mobile screen borders */
+    img.page-image {
+        width: 100%;
+        max-width: 22em;
+        margin: 1em auto;
+    }
+
+    /* 2. Scale form fieldsets down to maximize horizontal visual screen space */
+    fieldset {
+        padding: 1em;
+        margin-bottom: 1.2em;
+    }
+
+    /* 3. Increase clickable target sizes for interactive forms and inputs on mobile */
+    input,
+    select,
+    textarea {
+        padding: 0.8em;
+        /* Gives larger surface area for physical fingers on touch screens */
+        font-size: 1em;
+    }
+
+    /* 4. Responsive Table Optimization */
+    /* Prevents large data tables from breaking or compressing off-screen horizontally */
+    .table-section {
+        width: 100%;
+        overflow-x: auto;
+        /* Generates smooth swipe-scroll bars for small display monitors */
+        -webkit-overflow-scrolling: touch;
+    }
+
+    table {
+        min-width: 500px;
+        /* Forces structure layout integrity without squishing sentences */
+    }
 }
